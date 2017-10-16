@@ -1,0 +1,24 @@
+<%= form_for @offer do |f| %>
+  <% if @offer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@offer.errors.count, "error") %> prohibited this offer from being saved:</h2><ul>
+      <% @offer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %> </ul>
+    </div>
+  <% end %> </ul>
+
+  <div class="form-group col-md-8">
+    <%= f.label :nombre, 'Título:' %>
+    <%= f.text_field :nombre, class: 'form-control',placeholder: 'Título de la oferta', required:true%>
+  </div>
+ 
+  <div class="form-group col-md-8">
+    <%= f.label :descripcion, 'Descripción' %>
+    <%= f.text_area :descripcion, class: 'form-control', placeholder: 'Descripción de la oferta', required:true%>
+  </div>
+
+  <div class="form-group col-md-8">
+    <%= f.submit "Añadir", class: 'btn btn-lg btn-primary btn-block'%>
+  </div>
+<% end %> </ul>

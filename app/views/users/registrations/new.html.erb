@@ -1,0 +1,124 @@
+  <body>
+    <div class="wrapper">
+     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), 
+        html: {class: "form-signup"}) do |f| %>
+      <%= devise_error_messages! %>
+      <%= stylesheet_link_tag "application", :media => "all" %>
+    <form>
+
+    <h2 class="form-signup-heading">Registrarse</h2>
+    
+
+    
+    <div class="form-row">
+      <div class="form-group col-md-6">
+      <%= f.label :firstName, 'Primer Nombre' %>
+      <%= f.text_field :firstName, class: 'form-control', placeholder: 'Primer Nombre', required:true%>
+        </div>
+      <div class="form-group col-md-6">
+       <%= f.label :secondName, 'Segundo Nombre' %>
+        <%= f.text_field :secondName, class: 'form-control', placeholder: 'Segundo Nombre' %>
+      </div>
+    </div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+      <%= f.label :firstLastName, 'Primer Apellido' %>
+      <%= f.text_field :firstLastName, class: 'form-control', placeholder: 'Primer Apellido', required:true%>
+        </div>
+      <div class="form-group col-md-6">
+       <%= f.label :secondLastName, 'Segundo Apellido' %>
+        <%= f.text_field :secondLastName, class: 'form-control', placeholder: 'Segundo Apellido' %>
+      </div>
+    </div>  
+
+    <div class="form-row">
+      <div class="form-group col-md-5">
+       <%= f.label :Tipo_de_documento_de_identidad %><br />
+    <%= f.select :typeId, options_for_select("Cédula de ciudadanía":"Cédula de ciudadanía" , "Cédula de extranjería": "Cédula de extranjería", Pasaporte: "Pasaporte"),{},{:class=> 'form-control'}%>
+      </div>
+      <div class="form-group col-md-4">
+     <%= f.label :Identificación %><br />
+    <%= f.text_field :idd, autofocus: true, class: 'form-control',required:true%>
+      </div>
+      <div class="form-group col-md-3">
+     <%= f.label :"Fecha de Nacimiento" %><br />
+    <%= f.date_field :birthDate, autofocus: true,class: 'form-control',required:true%>
+      </div>
+    </div>
+
+
+     <div class="form-row">
+      <div class="form-group col-md-6">
+     <%= f.label :Teléfono %><br />
+    <%= f.text_field :tel, autofocus: true,class: 'form-control', required:true%>
+        </div>
+      <div class="form-group col-md-6">
+               <%= f.label :Celular %><br />
+    <%= f.text_field :cel, autofocus: true, class: 'form-control'%>
+      </div>
+    </div>  
+
+
+     <div class="form-row">
+     <div class="form-group col-md-6">
+      <%= f.label :Lugar_de_residencia %><br />
+    <%= f.select :location, options_for_select(Barbosa: "Barbosa", Girardota: "Girardota", Copacabana: "Copacabana", Bello: "Bello", Medellín: "Medellín", itagüi: "itagüi", Envigado: "Envigado", Sabaneta: "Sabaneta", "La Estrella": "La Estrella", Caldas: "Caldas"),{},{:class=> 'form-control'}%>
+
+        </div>
+      <div class="form-group col-md-6">
+      <%= f.label :Dirección %><br />
+    <%= f.text_field :direccion, autofocus: true, class: 'form-control'%>
+      </div>
+    </div>  
+
+ <div class="form-group">
+<%= f.label :Correo_electrónico %><br />
+    <%= f.email_field :email, autofocus: true, class: 'form-control',required:true%> 
+ </div>
+
+  <div class="form-row">
+     <div class="form-group col-md-6">
+   <%= f.label :Contraseña %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control'%>
+        </div>
+      <div class="form-group col-md-6">
+      <%= f.label :Confirmación_de_contraseña %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', required:true%>
+      </div>
+    </div>  
+
+  <div class="form-group">
+    <%= f.label :Descripcion_general %><br />
+     <%= f.text_area :description, autofocus: true, class: 'form-control',maxlength: 100, placeholder: 'Maximo 100 letras' %>
+  </div>
+
+
+
+    <div class="form-group">
+      <label>Terminos y condiciones</label>
+      <div style="height:120px;overflow:scroll;padding:10px;" class="form-control">
+       Texto de aceptar los requisitos
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label">
+
+
+
+        <input class="form-check-input" type="checkbox" required="true"> Aceptar
+        </label>
+      </div>
+    </div>
+ <%= f.button "Registrarse", class: 'btn btn-lg btn-primary btn-block' %>
+    </form>
+    </div>
+     <% end %>
+  </body>
+
+<%= render "users/shared/links" %>
+
