@@ -129,7 +129,18 @@ ActiveRecord::Schema.define(version: 20171016203202) do
     t.string "tel", default: "", null: false
     t.string "cel"
     t.boolean "verified", default: false, null: false
-    t.string "photo"
+    t.string "photo_file_name"
+    t.string "photo_content_type"
+    t.integer "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string "photoId1_file_name"
+    t.string "photoId1_content_type"
+    t.integer "photoId1_file_size"
+    t.datetime "photoId1_updated_at"
+    t.string "photoId2_file_name"
+    t.string "photoId2_content_type"
+    t.integer "photoId2_file_size"
+    t.datetime "photoId2_updated_at"
     t.integer "time", default: 0, null: false
     t.string "location", default: "", null: false
     t.string "direccion", default: "", null: false

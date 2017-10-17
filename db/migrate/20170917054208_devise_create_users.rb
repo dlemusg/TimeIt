@@ -47,7 +47,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
 
       #this is part of user comun
       t.boolean :verified,      null:false, default: false
-      t.string  :photo
+      t.attachment  :photo
+      t.attachment  :photoId1
+      t.attachment  :photoId2
       t.integer :time,           null:false, default: 0
       t.string  :location,       null:false, default: ""
       t.string  :direccion,      null:false, default:""

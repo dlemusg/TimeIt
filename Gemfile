@@ -37,6 +37,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'bourbon'
 gem 'activeadmin', github: 'activeadmin'
+gem 'paperclip'
 
 #gem to sing_up and ...
 gem 'devise',github: "plataformatec/devise"

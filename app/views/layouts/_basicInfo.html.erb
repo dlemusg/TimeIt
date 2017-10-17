@@ -1,5 +1,5 @@
 <div class="card col-3">
-  <img class="card-img-top" src="../../../avatar1.png" height="340" width="340" >
+  <img class="card-img-top" src= <%=current_user.photo%> height="250" width="250" >
 
   <fieldset class="rating" align="center">
     <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
@@ -15,9 +15,9 @@
   </fieldset>
 
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><h3 class="card-title"><strong>Nombre</strong></h3>
-      <p class="card-text"><%=current_user.firstName%> <%=current_user.firstLastName%></p></li>
-    <li class="list-group-item"><strong>Tiempo: </strong>0</li>
+     <!-- <li class="list-group-item"><h3 class="card-title"><strong>Nombre</strong></h3> -->
+    <font size="8"><li class="list-group-nombre"><center><%=current_user.firstName%> <%=current_user.firstLastName%></center></li></font>
+    <li class="list-group-item"><strong>Tiempo: </strong><%=current_user.time%></li>
     <li class="list-group-item"><strong>Cedula: </strong><%=current_user.idd%></li>
 
     <li class="list-group-item"><strong>Ubicacion: </strong><%=current_user.location%></li>

@@ -1,4 +1,12 @@
 class User < ApplicationRecord
+
+  has_attached_file :photo, styles: { medium: "300x300>", thumb: "100x100>" }
+  has_attached_file :photoId1, styles: { medium: "300x300>", thumb: "100x100>" }
+  has_attached_file :photoId2, styles: { medium: "300x300>", thumb: "100x100>" }
+  validates_attachment :photo, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+  validates_attachment :photoId1, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+  validates_attachment :photoId2, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+
   before_validation(:on => :create) do
   #  self.password = "none"
    # self.password_confirmation = "none"

@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
     before_action :configure_permitted_parameters, if: :devise_controller?
     before_action :parametros_permitidos_modifica, if: :devise_controller?
     before_action :authenticate_user!
+    
     protected
 
         def parametros_permitidos_modifica
@@ -18,7 +19,8 @@ class ApplicationController < ActionController::Base
                 :password, 
                 :password_confirmation, 
                 :current_password,
-                :description) }
+                :description,
+                :photo) }
          end 
 
         def configure_permitted_parameters
@@ -38,7 +40,10 @@ class ApplicationController < ActionController::Base
                 :password, 
                 :password_confirmation, 
                 :description,
-                :tiempo) }
+                :tiempo,
+                :photo,
+                :photoId1,
+                :photoId2) }
             end
 
      
