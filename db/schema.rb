@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016203202) do
+ActiveRecord::Schema.define(version: 20171011050801) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "namespace"
@@ -84,20 +84,15 @@ ActiveRecord::Schema.define(version: 20171016203202) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "ofert_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "idCategoria"
-    t.integer "idOferta"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "offers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "nombre"
-    t.text "descripcion"
-    t.string "imagen"
+    t.string "name"
+    t.text "description"
+    t.string "picture"
     t.bigint "user_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_offers_on_category_id"
     t.index ["user_id"], name: "index_offers_on_user_id"
   end
 
@@ -151,5 +146,6 @@ ActiveRecord::Schema.define(version: 20171016203202) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "offers", "categories"
   add_foreign_key "offers", "users"
 end
