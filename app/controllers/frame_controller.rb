@@ -23,9 +23,6 @@ class FrameController < ApplicationController
   def perfilPublico
   end
 
-  def registro
-  end
-
   def solicitudesPend
   end
 
@@ -35,6 +32,6 @@ class FrameController < ApplicationController
   def verOfertas       
      @cate = params[:cate]     
      @ver_oferta_categoria = Offer.where(:category_id =>@cate)
-     @ver_oferta_todas = Offer.all     
+     @ver_oferta_todas = Offer.all          
   end
 end

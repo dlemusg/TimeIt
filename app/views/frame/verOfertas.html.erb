@@ -1,56 +1,11 @@
 <div class="container-fluid">
-
   <%=render 'layouts/header'%>
-
-
 <div class="row container-fluid">
-
-
   <%=render 'layouts/basicInfo'%>
-
-
   <div class="col container-fluid card">
-
-
-	    <div class="container card-header">
-	  	
+	    <div class="container card-header">	  	
 		  	<nav class="navbar navbar-light bg-faded">
-
-			    <ul class="nav nav-tabs card-header-tabs">
-			      <li class="nav-item">
-			        <a class="nav-link" href="/frame/inicio">Inicio	</a>
-			      </li>
-			      <li class="nav-item">
-							<a class="nav-link" href="/frame/agregarOferta">Agregar Oferta</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="/frame/categorias">Categorias</a>
-			      </li>		
-			      <li class="nav-item">
-			        <a class="nav-link active" href="/frame/verOfertas?cate=0">Ofertas</a>
-			      </li>		     
-			      <li class="nav-item">
-			        <a class="nav-link" href="/frame/verDetallesOferta">Perfil</a>
-			      </li>	 
-			      <li class="nav-item">
-			        <a class="nav-link" href="/frame/historial">Transacciones</a>
-			      </li>	           
-			    </ul>
-			  
-			  <button class="navbar-toggler btn btn-secondary float-right" type="button" data-toggle="collapse" href="#collapse1"><span class="navbar-toggler-icon my-toggler"></span></button> 
-			  <div class="navbar-collapse collapse" id="collapse1">
-			        <ul class="navbar-nav float-right">
-			            <li class="nav-item active">
-			                <a class="nav-link" href="#">Opcion 1</a>
-			            </li>
-			            <li class="nav-item">
-			                <a class="nav-link" href="#">Opcion 2</a>
-			            </li>
-			            <li class="nav-item">
-			                <a class="nav-link" href="#">Opcion 3</a>
-			            </li>
-			        </ul>
-				</div>
+		  		<%=render 'layouts/pestanasPrincipales', locals: {variable4: "active"}%>	   
 			</nav>	 
 	    </div>
 
@@ -78,6 +33,9 @@
 						      <h2 class="mt-0 mb-1"><%= offer.name %></h2>			      
 						       <h4 class="mt-0 mb-1">Descripcion de la oferta:</h4>	      
 						      <%= offer.description %>
+						      <div> 
+						        <%= link_to 'Solicitar', edit_user_registration_path, :class => "btn btn-outline-primary float-right" %>
+						      </div>
 						    </div>
 						  </li>
 						</ul>			  				  				
