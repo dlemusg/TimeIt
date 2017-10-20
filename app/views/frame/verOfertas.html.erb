@@ -56,36 +56,32 @@
 
 	  <div class="container card-body">
 	 	
-	 	<% if @cate != "0" %>
-			<% @offer_categories.each do |o_c| %>  	 		
-			  	<% @ver_oferta.each do |offer| %>   
-		 			<% if offer.id == o_c.idOferta %>
+	 	<% if @cate != "0" %>		 	 		
+			  	<% @ver_oferta_categoria.each do |offer| %>		 			
 			 			<ul class="list-unstyled">
 						  <li class="media">
-						    <img width="250" height="280" class="d-flex mr-3" src=<%= offer.imagen %> alt="Generic placeholder image">
+						    <img width="250" height="280" class="d-flex mr-3" src=<%= offer.picture %> alt="Generic placeholder image">
 						    <div class="media-body">
-						      <h2 class="mt-0 mb-1"><%= offer.nombre %></h2>			      
-						       <h4 class="mt-0 mb-1">Descripcion de la oferta:</h4>		      
-						      <%= offer.descripcion %>
+						      <h2 class="mt-0 mb-1"><%= offer.name %></h2>			      
+						       <h4 class="mt-0 mb-1">Descripcion de la oferta:</h4>	      
+						      <%= offer.description %>
 						    </div>
 						  </li>
-						</ul>			  			
-			  		<% end %>		  				
-				<% end %>		  				
-			<% end %>	
+						</ul>			  				  				
+				<% end %>
 		<% else %>
-				<% @ver_oferta.each do |offer| %> 
-				<ul class="list-unstyled">
-					<li class="media">
-						<img width="250" height="280" class="d-flex mr-3" src=<%= offer.imagen %> alt="Generic placeholder image">
-						<div class="media-body">
-							<h2 class="mt-0 mb-1"><%= offer.nombre %></h2>				      
-							<h4 class="mt-0 mb-1">Descripcion de la oferta:</h4>		      
-							<%= offer.descripcion %>
-						</div>
-					</li>
-				</ul>
-			<% end %>
+				<% @ver_oferta_todas.each do |offer| %> 		 			
+			 			<ul class="list-unstyled">
+						  <li class="media">
+						    <img width="250" height="280" class="d-flex mr-3" src=<%= offer.picture %> alt="Generic placeholder image">
+						    <div class="media-body">
+						      <h2 class="mt-0 mb-1"><%= offer.name %></h2>			      
+						       <h4 class="mt-0 mb-1">Descripcion de la oferta:</h4>	      
+						      <%= offer.description %>
+						    </div>
+						  </li>
+						</ul>			  				  				
+				<% end %>
 		<% end %>
 
 	  </div>	

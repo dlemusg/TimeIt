@@ -34,7 +34,7 @@ class FrameController < ApplicationController
 
   def verOfertas       
      @cate = params[:cate]     
-     @offer_categories = OfertCategory.where(:idCategoria => @cate)
-     @ver_oferta = Offer.all
+     @ver_oferta_categoria = Offer.where(:category_id =>@cate)
+     @ver_oferta_todas = Offer.all     
   end
 end

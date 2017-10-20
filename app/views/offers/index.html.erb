@@ -16,9 +16,9 @@
   <tbody>
     <% @offers.each do |offer| %>
       <tr>
-        <td><%= offer.nombre %></td>
-        <td><%= offer.descripcion %></td>
-        <td><%= offer.imagen %></td>
+        <td><%= offer.name %></td>
+        <td><%= offer.description %></td>
+        <td><%= offer.picture %></td>
         <td><%= offer.user %></td>
         <td><%= link_to 'Show', offer %></td>
         <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
@@ -50,10 +50,10 @@
 
           <ul class="nav nav-tabs card-header-tabs">
             <li class="nav-item">
-              <a class="nav-link active" href="/frame/inicio">Inicio	</a>
+              <a class="nav-link" href="/frame/inicio">Inicio	</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/frame/agregarOferta">Agregar Oferta</a>
+              <a class="nav-link active" href="/frame/agregarOferta">Agregar Oferta</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/frame/categorias">Categorias</a>
@@ -99,9 +99,9 @@
         <tbody>
         <% @offers.each do |offer| %>
             <tr>
-              <td><%= offer.nombre %></td>
-              <td><%= offer.descripcion %></td>
-              <td><%= offer.imagen %></td>
+              <td><%= offer.name %></td>
+              <td><%= offer.description %></td>
+              <td><%= offer.picture %></td>
               <td><%= link_to 'Mostrar', offer %></td>
               <td><%= link_to 'Editar', edit_offer_path(offer) %></td>
               <td><%= link_to 'Eliminar', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
