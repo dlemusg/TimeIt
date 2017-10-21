@@ -40,7 +40,7 @@ gem 'jquery-rails'
 gem 'bourbon'
 gem 'activeadmin', github: 'activeadmin'
 gem 'paperclip'
-
+gem 'elasticsearch', '~> 5.0', '>= 5.0.4'
 #gem to sing_up and ...
 gem 'devise',github: "plataformatec/devise"
 
