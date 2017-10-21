@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+gem 'searchkick'
 #gem 'haml-rails'
 gem 'bootstrap'
 gem 'jquery-rails'

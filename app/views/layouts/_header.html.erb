@@ -2,13 +2,12 @@
   <div class="container-fluid sticky-top">
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#"><h2><strong>TimeIt</strong></h2></a>
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" placeholder="Busqueda..." 
-          aria-label="Search" type="text">
-        </input>
-      
-        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Busqueda</button> 
-      </form>      
+        <%= form_for :term, url: offers_path, method: :get do |form| %>
+                  <p>
+                    <%= text_field_tag :term, params[:term] %>
+                    <%= submit_tag "Search", name: nil %>
+                  </p>
+        <% end %>   
     </nav>
   </div>
 </div>
