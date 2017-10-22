@@ -20,6 +20,10 @@
 						      <h2 class="mt-0 mb-1"><%= offer.name %></h2>			      
 						       <h4 class="mt-0 mb-1">Descripcion de la oferta:</h4>	      
 						      <%= offer.description %>
+						      <div> 
+						      	<%= render "requests/form", request: @request, :locals => {:idOffer => offer.id ,:idUser => offer.user_id } %> 
+						      </div>
+						      
 						    </div>
 						  </li>
 						</ul>			  				  				
@@ -34,7 +38,7 @@
 						       <h4 class="mt-0 mb-1">Descripcion de la oferta:</h4>	      
 						      <%= offer.description %>
 						      <div> 
-						        <%= link_to 'Solicitar', edit_user_registration_path, :class => "btn btn-outline-primary float-right" %>
+						        <%= render "requests/form", request: @request, :locals => {:idOffer => offer.id ,:idUser => offer.user_id } %> 
 						      </div>
 						    </div>
 						  </li>

@@ -17,9 +17,7 @@ Rails.application.routes.draw do
 
   get 'frame/perfilPrivado' => 'frame#perfilPrivado'
 
-  get 'frame/perfilPublico' => 'frame#perfilPublico'
-
-  get 'frame/registro' => 'frame#registro'
+  get 'frame/perfilPublico' => 'frame#perfilPublico'  
 
   get 'frame/solicitudesPend' => 'frame#olicitudesPend'
 
