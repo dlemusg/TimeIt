@@ -25,16 +25,20 @@
   <button type="button" class="btn btn-outline-primary dropdown-toggle float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notificaciones  <span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%> 
    </span></button>
   <div class="dropdown-menu">   
-  	<% @userRequest.each do |useReq| %>   		
-		<% @ver_oferta_todas.each do |offer| %> 
-			<% if useReq.offer_id = offer.id %>	
-				<div class="dropdown-divider"></div>	
-				<a class="dropdown-item" href="#"><%=offer.name%>
-				<button type="button" class="btn btn-outline-primary">Aceptar</button>
-				<button type="button" class="btn btn-outline-primary">Rechazar</button>	
-				</a> 					
-			<% end %>	 		  				  				
-		<% end %>					 		  				  				
-	<% end %>        
+  	<% if Request.exists? and %>
+	  	<% @userRequest.each do |useReq| %>  
+	  		<% if Offer.exists? and %> 		
+				<% @ver_oferta_todas.each do |offer| %> 
+					<% if useReq.offer_id = offer.id %>	
+						<div class="dropdown-divider"></div>	
+						<a class="dropdown-item" href="#"><%=offer.name%>
+						<button type="button" class="btn btn-outline-primary">Aceptar</button>
+						<button type="button" class="btn btn-outline-primary">Rechazar</button>	
+						</a> 					
+					<% end %>	 		  				  				
+				<% end %>	
+			<% end %>				 		  				  				
+		<% end %>  
+	<% end %>      
   </div>
 </div>
