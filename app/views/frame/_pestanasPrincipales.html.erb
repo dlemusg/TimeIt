@@ -27,7 +27,7 @@
   <div class="dropdown-menu">   
   	<% if @userRequest != nil and Request.exists?%>
 	  	<% @userRequest.each do |useReq| %>  
-	  		<% if @ver_oferta_todas != nil and Offer.exists? and %> 		
+	  		<% if @ver_oferta_todas != nil and Offer.exists? %> 		
 				<% @ver_oferta_todas.each do |offer| %> 
 					<% if useReq.offer_id = offer.id %>	
 						<div class="dropdown-divider"></div>	
