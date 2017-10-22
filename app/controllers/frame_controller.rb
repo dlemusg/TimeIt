@@ -34,5 +34,6 @@ class FrameController < ApplicationController
      @ver_oferta_categoria = Offer.where(:category_id =>@cate)
      @ver_oferta_todas = Offer.all   
      @request = Request.new       
+     @userRequest = Request.where(:user_id => current_user.id)
   end
 end
