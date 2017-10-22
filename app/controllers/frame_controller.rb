@@ -29,6 +29,12 @@ class FrameController < ApplicationController
   def verDetallesOferta
   end
 
+  def _pestanasPrincipales
+    @ver_oferta_todas = Offer.all   
+    @request = Request.new       
+    @userRequest = Request.where(:user_id => current_user.id)
+  end
+
   def verOfertas       
      @cate = params[:cate]     
      @ver_oferta_categoria = Offer.where(:category_id =>@cate)

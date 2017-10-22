@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     before_action :parametros_permitidos_modifica, if: :devise_controller?
     #before_action :authenticate_user!
     
-   
+ 
     protected
 
         def parametros_permitidos_modifica
