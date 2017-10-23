@@ -11,48 +11,21 @@
 
 	<div class="container card-body">
 	  
-	  <ul class="list-unstyled">
-	  <li class="media">
-	    <img width="250" height="280" class="d-flex mr-3" src="../../../cate3.jpg" alt="Generic placeholder image">
-	    <div class="media-body">
-	      <h2 class="mt-0 mb-1">[Nombre de la Oferta</h2>
-	      [Descripcion de la Oferta subida por el Usuario]
-	    </div>
-	  </li>
-
-	  <li class="media">
-	    <img width="250" height="280" class="d-flex mr-3" src="../../../cate11.jpg" alt="Generic placeholder image">
-	    <div class="media-body">
-	      <h2 class="mt-0 mb-1">[Nombre de la Oferta</h2>
-	      [Descripcion de la Oferta subida por el Usuario]
-	    </div>
-	  </li>
-
-	  <li class="media">
-	    <img width="250" height="280" class="d-flex mr-3" src="../../../cate18.jpg" alt="Generic placeholder image">
-	    <div class="media-body">
-	      <h2 class="mt-0 mb-1">[Nombre de la Oferta</h2>
-	      [Descripcion de la Oferta subida por el Usuario]
-	    </div>
-	  </li>
-
-	  <li class="media">
-	    <img width="250" height="280" class="d-flex mr-3" src="../../../cate2.jpg" alt="Generic placeholder image">
-	    <div class="media-body">
-	      <h2 class="mt-0 mb-1">[Nombre de la Oferta</h2>
-	      [Descripcion de la Oferta subida por el Usuario]
-	    </div>
-	  </li>
-
-	  <li class="media">
-	    <img width="250" height="280" class="d-flex mr-3" src="../../../cate7.jpg" alt="Generic placeholder image">
-	    <div class="media-body">
-	      <h2 class="mt-0 mb-1">[Nombre de la Oferta</h2>
-	      [Descripcion de la Oferta subida por el Usuario]
-	    </div>
-	  </li>
-	  
-	  </ul>
+	 <% @ver_oferta_unicas.each do |offer| %> 		 			
+			 			<ul class="list-unstyled">
+						  <li class="media">
+						    <img width="250" height="280" class="d-flex mr-3" src=<%= offer.picture %> alt="Generic placeholder image">
+						    <div class="media-body">
+						      <h2 class="mt-0 mb-1"><%= offer.name %></h2>			      
+						       <h4 class="mt-0 mb-1">Descripcion de la oferta:</h4>	      
+						      <%= offer.description %>
+						      <div> 
+						        <%= render "offers/form2", request: @request, :locals => {:idOffer => offer.id ,:idUser => offer.user_id } %> 
+						      </div>
+						    </div>
+						  </li>
+						</ul>			  				  				
+				<% end %>
 
 
 	</div>

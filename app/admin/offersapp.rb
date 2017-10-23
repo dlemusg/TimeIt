@@ -1,38 +1,31 @@
-ActiveAdmin.register Offer do 
-
-	  permit_params :nombre, :descripcion, :imagen, :user
-
-
+ActiveAdmin.register Offer do
+  permit_params :id,:name, :description, :picture, :user, :category
 
   index do
     selectable_column
     id_column
-    column :nombre
-    column :descripcion
-    column :imagen
-    column :user
-            actions
+    column :id
+    column :name
+    column :picture
+    column :category
+    actions
   end
 
-
-
-  filter :nombre
-  filter :descripcion
-  filter :imagen
+  filter :category
   filter :user
 
   form do |f|
     f.inputs do
-      f.input :nombre
-      f.input :descripcion
-      f.input :imagen
+      f.input :name
+      f.input :picture
+      f.input :description
       f.input :user
-     end
+      f.input :category
+      end
     f.actions
   end
 
- 
-
 end
+
 
  
