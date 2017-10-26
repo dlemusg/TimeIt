@@ -6,8 +6,10 @@ ActiveAdmin.register Offer do
     id_column
     column :id
     column :name
-    column :picture
     column :category
+    column "Foto", :picture do |obj|
+      image_tag(obj.picture.url(:thumb))
+    end
     actions
   end
 
