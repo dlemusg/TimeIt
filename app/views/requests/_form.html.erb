@@ -14,12 +14,17 @@
   <%= form.hidden_field :user_id, value: locals[:idUser] %>
   <%= form.hidden_field :offer_id, value: locals[:idOffer] %>
 
-  <div class="actions">
-    <%= form.submit "Solicitar", :class => "btn btn-outline-primary float-right" %>
-  </div>
+    <div class="actions">
+      <%= form.submit "Solicitar", :class => "btn btn-outline-primary float-right" %>
+    </div>
 
-<div class="actions">
-    <%= link_to "Ver mas", :class => "btn btn-outline-primary float-right" %>
-  </div>
+
+    <% @ver_oferta_todas.each do |offer| %>
+        <div class="actions">
+            <%= link_to "Ver mas", frame_perfilPublico_url(:users => offer.user),:class => "btn btn-outline-primary float-right" %>
+        </div>
+    <%end%>
 
 <% end %>
+
+

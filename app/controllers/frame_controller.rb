@@ -44,4 +44,11 @@ class FrameController < ApplicationController
      @request = Request.new       
      @userRequest = Request.where(:user_id => current_user.id)
   end
+
+  def perfilPublico
+    @user = params[:users]
+    @ver_perfil_publico = User.where(:id => @user)
+  end
+
+
 end
