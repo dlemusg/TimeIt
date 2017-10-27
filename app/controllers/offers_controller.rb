@@ -11,6 +11,9 @@ class OffersController < ApplicationController
               else
                 Offer.all
               end
+    @request = Request.new
+    @userRequest = Request.where(:user_id => current_user.id)
+    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id)
   end
 
   # GET /offers/1
