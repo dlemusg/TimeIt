@@ -1,1 +1,14 @@
-aca
+<div class="container-fluid">
+  <%=render 'layouts/header'%>
+  <div class="row container-fluid">
+    <%=render 'requests/perfilPublico'%>
+    <div class="col container-fluid card">
+      <div class="container card-header">
+        <nav class="navbar navbar-light bg-faded">
+          <%=render 'pestanasPrincipales', locals: {variable4: "active"}%>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
