@@ -13,11 +13,12 @@
 	 	
 	 	<% if @cate != "0" %>		 	 		
 			  	<% @ver_oferta_categoria.each do |offer| %>		 			
+			 			<% if offer.user_id != current_user.id %>
 			 			<ul class="list-unstyled">
 						  <li class="media">
 						    <img width="250" height="280" class="d-flex mr-3" src=<%= offer.picture %> alt="card-img-top">
 
-						       <div class="media-body">
+						      <div class="media-body">
 						      <h2 class="mt-0 mb-1"><%= offer.name %></h2>			      
 						       <h4 class="mt-0 mb-1">Descripcion de la oferta:</h4>	      
 						      <%= offer.description %>
@@ -37,7 +38,8 @@
 						      
 						    </div>
 						  </li>
-						</ul>			  				  				
+						</ul>
+						<% end %>	
 				<% end %>
 		<% else %>
 				<% @ver_oferta_todas.each do |offer| %> 		 			

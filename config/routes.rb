@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :offers
   
+  get 'frame/notificaciones' => 'frame#notificaciones'
+
   get 'frame/agregarOferta' => 'frame#agregarOferta'
 
   get 'frame/categorias' => 'frame#categorias'

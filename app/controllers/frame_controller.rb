@@ -37,7 +37,10 @@ class FrameController < ApplicationController
     @userRequest = Request.where(:user_id => current_user.id)
   end
  
-  def verOfertas       
+  def verOfertas  
+     @id_notif = params[:id_notif]    
+     @nom_notif = params[:nom_notif] 
+     @ofer_notif = params[:ofer_notif]  
      @cate = params[:cate]     
      @ver_oferta_categoria = Offer.where(:category_id =>@cate)
      @ver_oferta_todas = Offer.where.not(:user_id => current_user.id)
@@ -45,6 +48,7 @@ class FrameController < ApplicationController
      @userRequest = Request.where(:user_id => current_user.id)
   end
 
+ 
   def perfilPublico
     @user = params[:users]
     @ver_perfil_publico = User.where(:id => @user)

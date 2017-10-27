@@ -22,7 +22,7 @@
 			  
 
 <div class="btn-group">
-  <button type="button" class="btn btn-outline-primary dropdown-toggle float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notificaciones  <span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%> 
+  <button type="button" class="btn btn-outline-primary dropdown-toggle float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Notificaciones  <span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%> 
    </span></button>
   <div class="dropdown-menu">   
   	<% if @userRequest != nil and Request.exists?%>
@@ -31,14 +31,62 @@
 				<% @ver_oferta_todas.each do |offer| %> 
 					<% if useReq.offer_id = offer.id %>	
 						<div class="dropdown-divider"></div>	
-						<a class="dropdown-item" href="#"><%=offer.name%>
-						<button type="button" class="btn btn-outline-primary">Aceptar</button>
-						<button type="button" class="btn btn-outline-primary">Rechazar</button>	
-						</a> 					
+						<% @nom_notif = User.where(id: offer.user_id).first.firstName%>
+						<% @ofer_notif = offer.name%>
+						<% @id_notif = useReq%>
+						<a class="dropdown-item" href="#notificacion" data-toggle="modal">
+							<strong>Oferta: </strong><%=offer.name%>
+							<p><strong>Usuario: </strong><%= User.where(id: offer.user_id).first.firstName%> </p>												
+						</a> 
 					<% end %>	 		  				  				
 				<% end %>	
 			<% end %>				 		  				  				
 		<% end %>  
 	<% end %>      
   </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="notificacion" data-target="#notificacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Solicitud</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	            	<span aria-hidden="true">&times;</span>
+		        </button>
+			</div>
+			<div class="modal-body">
+				<%=@nom_notif%> desea solicitar el servicio "<%=@ofer_notif%>"
+			</div>
+			<div class="modal-footer">
+			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal" href="#acep_notificacion" data-toggle="modal">Aceptar</button>	
+			    <% if @id_notif != nil %>
+			    	<%= link_to 'Rechazar',@id_notif.destroy, :class => "btn btn-outline-primary float-right" %>	
+			  	<% end %>	
+			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Posponer</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="acep_notificacion" data-target="#acep_notificacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Has aceptado la solicitud de <%=@nom_notif%></h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	            	<span aria-hidden="true">&times;</span>
+		        </button>
+			</div>
+			<div class="modal-body">
+				 Se procedera a la aceptacion de terminos del contrato
+			</div>
+			<div class="modal-footer">
+			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Cerrar</button>					   
+		</div>
+	</div>
 </div>
