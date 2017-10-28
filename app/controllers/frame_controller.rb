@@ -57,5 +57,10 @@ class FrameController < ApplicationController
     @ver_perfil_publico = User.where(:id => @user)
   end
 
+  def perfilPublicoCompleto
+    @user = params[:users]
+    @ver_perfil_publico = User.where(:id => @user)
+  end
+
 
 end

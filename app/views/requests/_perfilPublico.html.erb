@@ -25,6 +25,13 @@
   <div class="card-body">
 
     <% if current_user %>
+            <%if locals[:variable] == 1%>
+            <%@ver_perfil_publico.each do |usuario| %>
+                <div>
+                  <%= link_to 'Ver perfil', frame_perfilPublicoCompleto_url(:users => usuario.id),:class => "btn btn-outline-primary" %>
+                </div>
+            <%end%>
+        <%end%>
         <div>
           <%= link_to 'Modificar Cuenta', edit_user_registration_path, :class => "btn btn-outline-primary" %>
         </div>
