@@ -6,8 +6,9 @@ class User < ApplicationRecord
   validates_attachment :photo, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   validates_attachment :photoId1, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   validates_attachment :photoId2, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
-
+  
   before_validation(:on => :create) do
+
   #  self.password = "none"
    # self.password_confirmation = "none"
   end
@@ -29,6 +30,10 @@ class User < ApplicationRecord
 
 #no puede ser nulo ni vacio, unico
   validates :idd, presence: true, uniqueness: true
+  validates :photo, presence: true
+  validates :photoId1, presence: true
+  validates :photoId2, presence: true
+  
   #validates :edad, numericality: { only_integer: true }
 
 end
