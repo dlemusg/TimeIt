@@ -8,6 +8,33 @@
           <%=render 'pestanasPrincipales', locals: {variable4: "active"}%>
         </nav>
       </div>
+
+      <div class="container card-body">
+
+        <% @oferta_publica.each do |offer| %>
+            <ul class="list-unstyled">
+              <li class="media">
+                <img width="250" height="280" class="d-flex mr-3" src=<%= offer.picture %> alt="card-img-top">
+
+                <div class="media-body">
+                  <h2 class="mt-0 mb-1"><%= offer.name %></h2>
+                  <%= offer.description %>
+                <div>
+                    <%= link_to "Ver más", frame_perfilPublico_url(:users => offer.user_id),:class => "btn btn-outline-primary float-right" %>
+                </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+        <%end%>
+
+      </div>
+
+
+
+
     </div>
   </div>
 </div>
