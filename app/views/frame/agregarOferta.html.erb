@@ -1,18 +1,16 @@
 <div class="container-fluid">
   <%=render 'layouts/header'%>
 	<div class="row container-fluid">
-  		<%=render 'layouts/basicInfo'%>
-  			<div class="col container-fluid card">
-	    		<div class="container-fluid card-header">	  	
-		  			<nav class="navbar navbar-light bg-faded">
-		  				<%=render 'pestanasPrincipales', locals: {variable2: "active"}%>	   
-					</nav>	 
-	    		</div>
-				<div class="form-group">
-					<%= render "offers/form" %> 
-				</div>
+  	<%=render 'layouts/basicInfo'%>
+  	<div class="col container-fluid card">
+	    <div class="container-fluid card-header">	  	
+		  	<nav class="navbar navbar-light bg-faded">
+		  		<%=render 'pestanasPrincipales', locals: {variable2: "active"}%>	   
+				</nav>	 
+	  	</div>
+			<div class="form-group">
+				<%= render "offers/form", locals: {variable: "añadir"} %> 
 			</div>
-	
+		</div>
 	</div>
-
 </div>

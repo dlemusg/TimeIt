@@ -24,9 +24,9 @@ class FrameController < ApplicationController
 
   def inicio
     @offer = Offer.new
-    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
+    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id)
     @request = Request.new       
-    @userRequest = Request.where(:user_id => current_user.id).reverse
+    @userRequest = Request.where(:user_id => current_user.id)
   end
 
   def verMisOfertas
@@ -34,7 +34,7 @@ class FrameController < ApplicationController
     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
     @ver_oferta_unicas = Offer.where(:user_id => current_user.id).reverse
     @request = Request.new       
-    @userRequest = Request.where(:user_id => current_user.id).reverse
+    @userRequest = Request.where(:user_id => current_user.id)
   end
 
   def verDetallesOferta
@@ -45,10 +45,10 @@ class FrameController < ApplicationController
      @nom_notif = params[:nom_notif] 
      @ofer_notif = params[:ofer_notif]  
      @cate = params[:cate]     
-     @ver_oferta_categoria = Offer.where(:category_id =>@cate)
-     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id)
+     @ver_oferta_categoria = Offer.where(:category_id =>@cate).reverse
+     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
      @request = Request.new       
-     @userRequest = Request.where(:user_id => current_user.id)
+     @userRequest = Request.where(:user_id => current_user.id).reverse
   end
 
  

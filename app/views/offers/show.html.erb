@@ -8,30 +8,7 @@
 					<%=render 'frame/pestanasPrincipales', locals: {variable5: "active"}%>	   
 				</nav>	 
 			</div>			
-			<div class="container card-body">		
-				<div class="container card-body">
-					<div class="row">
-						<div class="col-lg-2">
-							<div class="media-body">
-								<img width="100" height="100" class="d-flex mr-3" src=<%= @offer.picture %>
-								alt="Generic placeholder image">
-							</div>
-						</div>
-						<div class="col-lg-5">
-							<div class="media-body">
-								<h2 class="mt-0 mb-3"> <%= @offer.name %></h2>
-								<%= @offer.description %>
-							</div>
-						</div>
-						<div class="col-lg-2">
-						</div>
-					</div>
-					<button class="navbar-toggler btn btn-secondary float-right" type="button" 
-						data-toggle="collapse" href="#collapse1"><span class="navbar-toggler-icon my-toggler">
-						</span></button>
-					<%= link_to 'Editar', edit_offer_path(@offer) %>
-				</div>
-			</div>	
+			<%= render 'detalles', offer: @offer %>
 		</div>
 	</div>
 </div>

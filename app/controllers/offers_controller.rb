@@ -49,14 +49,18 @@ class OffersController < ApplicationController
   # PATCH/PUT /offers/1
   # PATCH/PUT /offers/1.json
   def update
-    respond_to do |format|
-      if @offer.update(offer_params)
-        format.html { redirect_to @offer, notice: 'Offer was successfully updated.' }
-        format.json { render :show, status: :ok, location: @offer }
-      else
-        format.html { render :edit }
-        format.json { render json: @offer.errors, status: :unprocessable_entity }
+    if current_user.id == @offer.user_id
+      respond_to do |format|
+        if @offer.update(offer_params)
+          format.html { redirect_to @offer, notice: 'Offer was successfully updated.' }
+          format.json { render :show, status: :ok, location: @offer }
+        else
+          format.html { render :edit }
+          format.json { render json: @offer.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to "frame#inicio" 
     end
   end
 
@@ -78,6 +82,6 @@ class OffersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def offer_params
-      params.require(:offer).permit(:name,'category_id', :description, :picture)
+        params.require(:offer).permit(:name,'category_id', :description, :picture)
     end
 end

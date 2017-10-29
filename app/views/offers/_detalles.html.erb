@@ -1,0 +1,25 @@
+<div class="container card-body">
+    <h2 class="mt-0 mb-0"> <%= @offer.name %></h2>
+    <h11 class="mt-0 mb-0"><%= @offer.category.name %></h11>
+    <h10 class="mt-0 mb-3"> <%= '    -    ' %></h10>
+    <h10 class="mt-0 mb-3"> <%= @offer.created_at.strftime("Publicado %F")%></h10>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="media-body">
+                <img width="400" height="400" class="d-flex mr-3" src=<%= @offer.picture %>
+                alt="Generic placeholder image">
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="media-body">
+                <h6 class="mt-0 mb-3"><%= @offer.description %></h6>
+            </div>
+            <% if (current_user.id == @offer.user_id) %>
+                <%= link_to "Eliminar", edit_offer_path(@offer),
+                :class => "btn btn-outline-primary float-right" %>
+                <%= link_to "Editar", edit_offer_path(@offer),
+                :class => "btn btn-outline-primary float-right" %>
+            <% end %>
+        </div>
+    </div>
+</div>	
