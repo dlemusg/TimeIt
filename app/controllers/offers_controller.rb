@@ -7,7 +7,7 @@ class OffersController < ApplicationController
   def index
     search = params[:term].present? ? params[:term] : nil
     @offers = if search
-                Offer.search(search)
+                Offer.search(search, where: { user_id: { not: current_user.id }})
               else
                 Offer.all
               end
