@@ -16,7 +16,8 @@
 			 			<% if offer.user_id != current_user.id %>
 			 			<ul class="list-unstyled">
 						  <li class="media">
-						    <img width="250" height="280" class="d-flex mr-3" src=<%= offer.picture %> alt="card-img-top">
+								<img width="250" height="280" class="d-flex mr-3" src=<%= offer.picture %>
+								 alt="card-img-top">
 
 						      <div class="media-body">
 						      <h2 class="mt-0 mb-1"><%= offer.name %></h2>			      
@@ -29,7 +30,8 @@
 							      	<%=render 'avisoSolicitar'%>
 			
 							   <% else %>
-							 		 <%= link_to "Ver mas", frame_perfilPublico_url(:users => offer.user_id),:class => "btn btn-outline-primary float-right" %>
+										<%= link_to "Ver mas", frame_perfilPublico_url(:offers => offer.id, :users => offer.user_id),
+										:class => "btn btn-outline-primary float-right" %>
 
 							   <% end %>
 
@@ -44,7 +46,8 @@
 				<% @ver_oferta_todas.each do |offer| %> 		 			
 			 			<ul class="list-unstyled">
 						  <li class="media">
-						    <img width="250" height="280" class="d-flex mr-3" src=<%= offer.picture %> alt="Generic placeholder image">
+								<img width="250" height="280" class="d-flex mr-3" src=<%= offer.picture %>
+								 alt="Generic placeholder image">
 						    <div class="media-body">
 						      <h2 class="mt-0 mb-1"><%= offer.name %></h2>			      
 						       <h4 class="mt-0 mb-1">Descripcion de la oferta:</h4>	      
@@ -56,7 +59,9 @@
 						      <%=render 'avisoSolicitar'%>
 						      			
 							   <% else %>
-							          <%= link_to "Ver mas", frame_perfilPublico_url(:users => offer.user_id),:class => "btn btn-outline-primary float-right" %>
+								 <%= link_to "Ver mas", frame_perfilPublico_url(:offers => offer.id, 
+								 																						:users => offer.user_id),
+								 :class => "btn btn-outline-primary float-right" %>
 
 
 							   <% end %>
