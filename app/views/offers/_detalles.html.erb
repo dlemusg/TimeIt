@@ -16,14 +16,9 @@
                     <div class="media-body">
                         <h6 class="mt-0 mb-3"><%= of.description %></h6>
                     </div>
-                    <% if (current_user.id == of.user_id) %>
-                        <%= link_to "Eliminar", edit_offer_path(of),
-                        :class => "btn btn-outline-primary float-right" %>
-                        <%= link_to "Editar", edit_offer_path(of),
-                        :class => "btn btn-outline-primary float-right" %>
-                    <% end %>
+                    <%= render "requests/form", request: @request, :locals => {
+                        :idOffer => of.id,:idUser => of.user_id} %>
                 </div>
-            </div>
         </div>	
     <%end%>
 <% elsif locals[:variable] == "privado"%>
