@@ -8,13 +8,13 @@ class RequestsController < InheritedResources::Base
   # POST /offers.json
   def create
     @request= Request.new(request_params)
-
-    respond_to do |format|
+    @ver_oferta_categoria = Offer.where(:category_id =>@cate).reverse
+    respond_to  do |format|
       if @request.save
-        format.html { redirect_to @request, notice: 'Offer was successfully created.' }
-        format.json { render :show, status: :created, location: @request}
+          format.html
+          format.json { render :show, status: :created, location: @request}
+
       else
-        format.html { render :new }
         format.json { render json: @request.errors, status: :unprocessable_entity }
       end
     end
