@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <%=render 'layouts/header'%>
+  <div class="row container-fluid">
+    <%=render 'layouts/basicInfo'%>
+    <div class="col container-fluid card">
+      <div class="container card-header">
+        <nav class="navbar navbar-light bg-faded">
+          <%=render 'pestanasPrincipales', locals: {variable3: "active"}%>
+        </nav>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="row mb-2">
+          <div class="col-lg-12">
+            <div class="card px-4">
+
+              <div class="card-block">
+                <div class="icon-list row">
+                  <% @categories.each do |category| %>
+                  <div class="col-sm-6 col-md-4 col-lg-3"> <img src=<%= category.imagen %> >fa fa-address-book-o </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-address-card"></i>fa fa-address-card </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-address-card-o"></i>fa fa-address-card-o </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-bandcamp"></i>fa fa-bandcamp </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-bath"></i>fa fa-bath </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-bathtub"></i>fa fa-bathtub </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-drivers-license"></i>fa fa-drivers-license </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-drivers-license-o"></i>fa fa-drivers-license-o </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-eercast"></i>fa fa-eercast </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-envelope-open"></i>fa fa-envelope-open </div>
+                  <%end%>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
