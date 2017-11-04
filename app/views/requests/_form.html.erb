@@ -1,39 +1,22 @@
 <%= form_with(model: request, local: true) do |form| %>
-  <% if request.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(request.errors.count, "error") %> 
-        prohibited this request from being saved:</h2>
-      <ul>
-        <% request.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <% if request.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(request.errors.count, "error") %>
+            prohibited this request from being saved:</h2>
+          <ul>
+            <% request.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-  <%= form.hidden_field :user_id, value: locals[:idUser] %>
-  <%= form.hidden_field :offer_id, value: locals[:idOffer] %>
-
-
-
+    <%= form.hidden_field :user_id, value: locals[:idUser] %>
+    <%= form.hidden_field :offer_id, value: locals[:idOffer] %>
 
     <div class="actions">
       <%= form.submit "Solicitar",
                       :class => "btn btn-outline-primary float-right" %>
     </div>
-    <% @ver_oferta_todas.each do |offer| %>
-        <div class="col-lg-3">
-        <% if Request.exists?(offer_id: offer.id, user_id: offer.user_id)%>
-            <%=render 'avisoSolicitar'%>
-        <% else %>
-            <div class="actions">
-              <%= form.submit "Solicitar",
-                              :class => "btn btn-outline-primary float-right" %>
-            </div>
-        <% end %>
-      </div>
-    <%end%>
 
 <% end %>
-
-
