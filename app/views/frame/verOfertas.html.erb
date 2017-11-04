@@ -26,14 +26,10 @@
 											<h6 class="mt-0 mb-3"><%= offer.description %></h6>
 										</div>	
 									</div>
-									<div class="col-lg-3">        
-										<% if Request.exists?(offer_id: offer.id, user_id: offer.user_id)%>
-											<%=render 'avisoSolicitar'%>	
-										<% else %>
+									<div class="col-lg-3">
 											<%= link_to "Ver mas", frame_perfilPublico_url(:offers => offer.id, 
 												:users => offer.user_id),
 												:class => "btn btn-outline-primary float-right" %>
-										<% end %>
 									</div>
 								</div>
 							</ul>	
@@ -55,14 +51,10 @@
 										<h6 class="mt-0 mb-3"><%= offer.description %></h6>
 									</div>	
 								</div>
-								<div class="col-lg-3">        
-									<% if Request.exists?(offer_id: offer.id, user_id: offer.user_id)%>
-										<%=render 'avisoSolicitar'%>	
-									<% else %>
-										<%= link_to "Ver mas", frame_perfilPublico_url(:offers => offer.id, 
+								<div class="col-lg-3">
+										<%= link_to "Ver mas", frame_perfilPublico_url(:offers => offer.id,
 											:users => offer.user_id),
 											:class => "btn btn-outline-primary float-right" %>
-									<% end %>
 								</div>
 						 	</div>
 						</ul>			  				  				

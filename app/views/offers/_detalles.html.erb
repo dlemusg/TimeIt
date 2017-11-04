@@ -16,8 +16,15 @@
                     <div class="media-body">
                         <h6 class="mt-0 mb-3"><%= of.description %></h6>
                     </div>
-                    <%= render "requests/form", request: @request, :locals => {
-                        :idOffer => of.id,:idUser => of.user_id} %>
+                        <% if Request.exists?(offer_id: of.id, user_id: of.user_id)%>
+                            <%=render 'avisoSolicitar'%>
+                        <% else %>
+                          <div class="actions">
+                            <%= form.submit "Solicitar",
+                                          :class => "btn btn-outline-primary float-right" %>
+                          </div>
+                      <% end %>
+
                 </div>
         </div>	
     <%end%>

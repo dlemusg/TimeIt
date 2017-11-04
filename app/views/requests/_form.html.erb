@@ -14,10 +14,25 @@
   <%= form.hidden_field :user_id, value: locals[:idUser] %>
   <%= form.hidden_field :offer_id, value: locals[:idOffer] %>
 
+
+
+
     <div class="actions">
-      <%= form.submit "Solicitar", 
-      :class => "btn btn-outline-primary float-right" %>
+      <%= form.submit "Solicitar",
+                      :class => "btn btn-outline-primary float-right" %>
     </div>
+    <% @ver_oferta_todas.each do |offer| %>
+        <div class="col-lg-3">
+        <% if Request.exists?(offer_id: offer.id, user_id: offer.user_id)%>
+            <%=render 'avisoSolicitar'%>
+        <% else %>
+            <div class="actions">
+              <%= form.submit "Solicitar",
+                              :class => "btn btn-outline-primary float-right" %>
+            </div>
+        <% end %>
+      </div>
+    <%end%>
 
 <% end %>
 
