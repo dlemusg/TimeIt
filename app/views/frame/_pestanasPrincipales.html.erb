@@ -27,17 +27,15 @@
    </span></button>
   <div class="dropdown-menu">  
   	<% if @userRequest != nil and Request.exists? and @ver_oferta_todas2 != nil and Offer.exists?%> 	  		
-	  	<% @ver_oferta_todas2.each do |offer| %> 
-	  										
-				<div class="dropdown-divider"></div>	
-				<% @nom_notif = User.where(id: @userRequest.idDemandante).first.firstName%>
-				<% @ofer_notif = offer.name%>
-				<% @id_notif = @userRequest%>
-					<a class="dropdown-item" href="#notificacion" data-toggle="modal">
-							<strong>Oferta: </strong><%=offer.name%>
-							<p><strong>Usuario: </strong><%= User.where(id: @userRequest.idDemandante).first.firstName%> </p>						
-					</a> 					 		  				  				
-				
+	  	<% @ver_oferta_todas2.each do |offer| %> 	  										
+			<div class="dropdown-divider"></div>	
+			<% @nom_notif = User.where(id: @userRequest.idDemandante).first.firstName%>
+			<% @ofer_notif = offer.name%>
+			<% @id_notif = @userRequest%>
+			<a class="dropdown-item" href="#notificacion" data-toggle="modal">
+				<strong>Oferta: </strong><%=offer.name%>
+				<p><strong>Usuario: </strong><%= User.where(id: @userRequest.idDemandante).first.firstName%> </p>						
+			</a> 			
 		<% end %>				 		  				  				
 		 
 	<% end %>      

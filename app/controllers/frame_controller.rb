@@ -61,14 +61,14 @@ class FrameController < ApplicationController
   end
  
   def verOfertas  
-     @id_notif = params[:id_notif]    
-     @nom_notif = params[:nom_notif] 
-     @ofer_notif = params[:ofer_notif]  
-     @cate = params[:cate]     
-     @userRequest = Request.where(:user_id => current_user.id).first
-     @ver_oferta_categoria = Offer.where(:category_id =>@cate).reverse
-     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
-     if @userRequest != nil
+    @id_notif = params[:id_notif]    
+    @nom_notif = params[:nom_notif] 
+    @ofer_notif = params[:ofer_notif]  
+    @cate = params[:cate]     
+    @userRequest = Request.where(:user_id => current_user.id).first
+    @ver_oferta_categoria = Offer.where(:category_id =>@cate).reverse
+    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
+    if @userRequest != nil
       @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
     end
      @request = Request.new       
