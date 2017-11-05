@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'frame//verMisOfertas' => 'frame#verMisOfertas'
   get 'frame/verOfertas' => 'frame#verOfertas'
   get 'frame/perfilPublicoCompleto' => 'frame#perfilPublicoCompleto'
+  get 'frame/prueba' => 'frame#prueba'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

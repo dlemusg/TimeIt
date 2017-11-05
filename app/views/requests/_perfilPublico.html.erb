@@ -15,13 +15,15 @@
     <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
   </fieldset>
 
-  <ul class="list-group list-group-flush">
 
     <%@ver_perfil_publico.each do |usuario| %>
-        <font size="5"><li class="list-group-nombre"><center><%=usuario.firstName%> <%=usuario.firstLastName%></center></li></font>
-        <li class="list-group-item"><strong>Ubicacion: </strong><%=current_user.location%></li>
+        <font size="5"><center><%=usuario.firstName%> <%=usuario.firstLastName%></center></font>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Ubicación: </strong><%=usuario.location%></li>
+          <li class="list-group-item"><strong>Descripción: </strong><%=usuario.description%></li>
+        </ul>
     <%end%>
-  </ul>
+
   <div class="card-body">
 
     <% if current_user %>
