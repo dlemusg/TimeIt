@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(version: 20171021225700) do
   create_table "requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "user_id"
     t.bigint "offer_id"
+    t.integer "idDemandante"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["offer_id"], name: "index_requests_on_offer_id"

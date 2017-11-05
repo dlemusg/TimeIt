@@ -2,39 +2,59 @@ class FrameController < ApplicationController
   before_action :authenticate_user!
   def agregarOferta
     @offer = Offer.new
-    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id)
+    @userRequest = Request.where(:user_id => current_user.id).first
+    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
+    if @userRequest != nil
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+    end
     @request = Request.new       
-    @userRequest = Request.where(:user_id => current_user.id)
+    
   end
 
   def categorias
     @categories = Category.all
     @offer = Offer.new
-    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id)
+    @userRequest = Request.where(:user_id => current_user.id).first
+    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
+    if @userRequest != nil
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+    end
     @request = Request.new       
-    @userRequest = Request.where(:user_id => current_user.id)
+    
   end 
 
   def historial
     @offer = Offer.new
-    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id)
+    @userRequest = Request.where(:user_id => current_user.id).first
+    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
+    if @userRequest != nil
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+    end
     @request = Request.new       
-    @userRequest = Request.where(:user_id => current_user.id)
+    
   end
 
   def inicio
     @offer = Offer.new
-    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id)
+    @userRequest = Request.where(:user_id => current_user.id).first
+    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
+    if @userRequest != nil
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+    end
     @request = Request.new       
-    @userRequest = Request.where(:user_id => current_user.id)
+    
   end
 
   def verMisOfertas
     @offer = Offer.new
+    @userRequest = Request.where(:user_id => current_user.id).first
     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
+    if @userRequest != nil
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+    end
     @ver_oferta_unicas = Offer.where(:user_id => current_user.id).reverse
     @request = Request.new       
-    @userRequest = Request.where(:user_id => current_user.id)
+    
   end
 
   def verDetallesOferta
@@ -45,10 +65,14 @@ class FrameController < ApplicationController
      @nom_notif = params[:nom_notif] 
      @ofer_notif = params[:ofer_notif]  
      @cate = params[:cate]     
+     @userRequest = Request.where(:user_id => current_user.id).first
      @ver_oferta_categoria = Offer.where(:category_id =>@cate).reverse
      @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
+     if @userRequest != nil
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+    end
      @request = Request.new       
-     @userRequest = Request.where(:user_id => current_user.id).reverse
+     
   end
  
   def perfilPublico

@@ -37,7 +37,7 @@
   </div>
 
   <div class="form-group col-md-8">
-     <% if !current_user.verified %>
+     <% if current_user.verified %>
         <%= render 'frame/oferta' %>
      <%else%>
         <%= f.submit locals[:variable] , class: 'btn btn-lg btn-primary btn-block'%>
