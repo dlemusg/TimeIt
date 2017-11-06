@@ -1,11 +1,12 @@
 class FrameController < ApplicationController
   before_action :authenticate_user!
   def agregarOferta
+
     @offer = Offer.new
-    @userRequest = Request.where(:user_id => current_user.id).first
+    @userRequest = Request.where(:user_id => current_user.id)
     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
     if @userRequest != nil
-      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
     @request = Request.new       
     
@@ -14,10 +15,10 @@ class FrameController < ApplicationController
   def categorias
     @categories = Category.all
     @offer = Offer.new
-    @userRequest = Request.where(:user_id => current_user.id).first
+    @userRequest = Request.where(:user_id => current_user.id)
     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
     if @userRequest != nil
-      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
     @request = Request.new       
     
@@ -25,10 +26,10 @@ class FrameController < ApplicationController
 
   def historial
     @offer = Offer.new
-    @userRequest = Request.where(:user_id => current_user.id).first
+    @userRequest = Request.where(:user_id => current_user.id)
     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
     if @userRequest != nil
-      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
     @request = Request.new       
     
@@ -36,10 +37,10 @@ class FrameController < ApplicationController
 
   def inicio
     @offer = Offer.new
-    @userRequest = Request.where(:user_id => current_user.id).first
+    @userRequest = Request.where(:user_id => current_user.id)
     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
     if @userRequest != nil
-      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
     @request = Request.new       
     
@@ -47,10 +48,10 @@ class FrameController < ApplicationController
 
   def verMisOfertas
     @offer = Offer.new
-    @userRequest = Request.where(:user_id => current_user.id).first
+    @userRequest = Request.where(:user_id => current_user.id)
     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
     if @userRequest != nil
-      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
     @ver_oferta_unicas = Offer.where(:user_id => current_user.id).reverse
     @request = Request.new       
@@ -61,15 +62,15 @@ class FrameController < ApplicationController
   end
  
   def verOfertas  
-    @id_notif = params[:id_notif]    
-    @nom_notif = params[:nom_notif] 
-    @ofer_notif = params[:ofer_notif]  
+    @id_notif = params[:requests]    
+    @nom_notif = params[:users] 
+    @ofer_notif = params[:offers]  
     @cate = params[:cate]     
-    @userRequest = Request.where(:user_id => current_user.id).first
+    @userRequest = Request.where(:user_id => current_user.id)
     @ver_oferta_categoria = Offer.where(:category_id =>@cate).reverse
-    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
+    @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse    
     if @userRequest != nil
-      @ver_oferta_todas2 = Offer.where(:user_id => current_user.id, :id => @userRequest.offer_id)
+       @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
      @request = Request.new       
      
@@ -82,6 +83,8 @@ class FrameController < ApplicationController
     @request = Request.new  
     @offer = Offer.where(:id => @ofid)
   end
+
+
 
   def perfilPublicoCompleto
     @user = params[:users]

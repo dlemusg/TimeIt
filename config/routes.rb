@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'frame/estadoSolicitud' => 'frame#estadoSolicitud'
   get 'frame/historial' => 'frame#historial'
   get 'frame/inicio' => 'frame#inicio'
+  delete 'frame/inicio' => 'frame#inicio'
+  post 'frame/inicio' => 'frame#inicio'
   get 'frame/perfilPrivado' => 'frame#perfilPrivado'
   get 'frame/perfilPublico' => 'frame#perfilPublico'  
   get 'frame/solicitudesPend' => 'frame#olicitudesPend'

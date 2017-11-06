@@ -23,24 +23,31 @@
 			  
 
 <div class="btn-group">
-  <button type="button" class="btn btn-outline-primary dropdown-toggle float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Notificaciones  <span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%> 
+  <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">Notificaciones  
+   <span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%> 
    </span></button>
-  <div class="dropdown-menu">  
-  	<% if @userRequest != nil and Request.exists? and @ver_oferta_todas2 != nil and Offer.exists?%> 	  		
-	  	<% @ver_oferta_todas2.each do |offer| %> 	  										
-			<div class="dropdown-divider"></div>	
-			<% @nom_notif = User.where(id: @userRequest.idDemandante).first.firstName%>
-			<% @ofer_notif = offer.name%>
-			<% @id_notif = @userRequest%>
-			<a class="dropdown-item" href="#notificacion" data-toggle="modal">
-				<strong>Oferta: </strong><%=offer.name%>
-				<p><strong>Usuario: </strong><%= User.where(id: @userRequest.idDemandante).first.firstName%> </p>						
-			</a> 			
-		<% end %>				 		  				  				
-		 
-	<% end %>      
+  <div class="dropdown-menu" style="right: 0; left: auto;"> 
+  	<% if @userRequest != nil and Request.exists? and @ver_oferta_todas2 != nil and Offer.exists?%> 
+  		<% @userRequest.each do |userq| %>
+		  	<% @ver_oferta_todas2.each do |offer| %> 
+		  		<% if userq.offer_id == offer.id %>											
+					<div class="dropdown-divider"></div>	
+					<% @nom_notif = User.where(id: userq.idDemandante).first.firstName%>
+					<% @ofer_notif = offer.name%>
+					<% @id_notif = userq%>
+					<a class="dropdown-item" href="#notificacion" data-toggle="modal">
+						<strong>Oferta: </strong><%=offer.name%>
+						<p><strong>Usuario: </strong><%= User.where(id: userq.idDemandante).first.firstName%> </p>						
+					</a> 
+
+
+				<% end %>
+			<% end %>	
+		<% end %>		 
+	<% end %> 
   </div>
 </div>
+
 
 
 <!-- Modal -->
@@ -53,17 +60,21 @@
 	            	<span aria-hidden="true">&times;</span>
 		        </button>
 			</div>
+
+
 			<div class="modal-body">
 				<%=@nom_notif%> desea solicitar el servicio "<%=@ofer_notif%>"
 			</div>
 			<div class="modal-footer">
 			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal" href="#acep_notificacion" data-toggle="modal">Aceptar</button>	
 			    <% if @id_notif != nil %>
-			    	<button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal" href="#" data-toggle="modal">Rechazar</button>
-			    	
+			    	<%= button_to "Rechazar", @id_notif, :method => :delete, :class=>"btn btn-outline-primary float-right"%>    		
 			  	<% end %>	
 			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Posponer</button>
 			</div>
+
+
+
 		</div>
 	</div>
 </div>

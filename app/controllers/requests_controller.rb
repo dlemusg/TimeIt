@@ -20,6 +20,7 @@ class RequestsController < InheritedResources::Base
     end
   end
 
+
   private
 
     def request_params
