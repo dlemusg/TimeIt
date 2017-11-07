@@ -11,11 +11,13 @@ class RequestsController < InheritedResources::Base
     @ver_oferta_categoria = Offer.where(:category_id =>@cate).reverse
     respond_to  do |format|
       if @request.save
-          format.html
-          format.json { render :show, status: :created, location: @request}
+        format.html
+        format.json { render :show, status: :created, location: @request}
+        format.js
 
       else
         format.json { render json: @request.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
