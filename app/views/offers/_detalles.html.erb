@@ -16,15 +16,14 @@
                     <div class="media-body">
                         <h6 class="mt-0 mb-3"><%= of.description %></h6>
                     </div>
-                        <% if !current_user.verified %>
-                            <%= render 'verificar' %>
-                        <% elsif Request.exists?(offer_id: of.id, user_id: of.user_id)%>
-                            <%=render 'avisoSolicitar'%>
-                        <% else %>
-                            <%= render "requests/form", request: @request, :locals => {
+                    <% if !current_user.verified %>
+                        <%= render 'verificar' %>
+                    <% elsif Request.exists?(offer_id: of.id, user_id: of.user_id)%>
+                        <%=render 'avisoSolicitar'%>
+                    <% else %>
+                        <%= render "requests/form", request: @request, :locals => {
                           :idOffer => of.id ,:idUser => of.user_id, :idD => current_user.id} %>
-
-                      <% end %>
+                    <% end %>
                 </div>
             </div>	
         </div>
