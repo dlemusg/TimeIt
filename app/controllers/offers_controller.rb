@@ -74,6 +74,17 @@ class OffersController < ApplicationController
     end
   end
 
+  def eliminar
+    @offer_id = params[:offer_id]
+    @offer = Offer.where(id = @offer_id)
+    @offer.each do |offer|
+        offer.state = FALSE
+    end
+    redirect_to frame_verMisOfertas_path
+
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_offer
@@ -82,6 +93,6 @@ class OffersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def offer_params
-        params.require(:offer).permit(:name,'category_id', :description, :picture)
+        params.require(:offer).permit(:name,'category_id', :description, :picture, :state)
     end
 end

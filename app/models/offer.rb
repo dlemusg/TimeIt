@@ -12,4 +12,9 @@ class Offer < ApplicationRecord
     validates :category, presence: true
 
     #has_many :users, through: :requests
+
+    def des
+      state = FALSE
+    end
+
 end

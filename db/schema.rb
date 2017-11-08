@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 20171021225700) do
   create_table "offers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.text "description"
+    t.boolean "state", default: true
     t.string "picture_file_name"
     t.string "picture_content_type"
     t.integer "picture_file_size"

@@ -2,10 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a814ca4-6e25-41e5-89a1-23976984a51d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/users/photoid1s/000/000/001/medium/Captura_de_pantalla_2017-10-29_a_la(s)_5.51.03_p.m..png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/users/photoid1s/000/000/001/thumb/Captura_de_pantalla_2017-10-29_a_la(s)_5.51.03_p.m..png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/requests_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/requests_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/requests/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/requests/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/-Z/-ZqKRnCxzpsCI3Q6l8k4xCEUfnmkCp9wA9T9xrY-Aok.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/-Z/-ZqKRnCxzpsCI3Q6l8k4xCEUfnmkCp9wA9T9xrY-Aok.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/0K/0kI34vulvxlw6GW8jPVuy8_bub1UvfC5IMb8NbDfbzg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/0K/0kI34vulvxlw6GW8jPVuy8_bub1UvfC5IMb8NbDfbzg.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/2q/2q93hnZTpqFlpBDghSQoIqn5WLUBczSvi4uWPKI-XZQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/2q/2q93hnZTpqFlpBDghSQoIqn5WLUBczSvi4uWPKI-XZQ.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/33/33mWn-ogPBCS-fT6CJG-o1ehnuX6INgCV1KUgiyDxpg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/33/33mWn-ogPBCS-fT6CJG-o1ehnuX6INgCV1KUgiyDxpg.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/6w/6wXGCd5mkVq-mnxqCMy5Hh9fNde3WC_sObfTn4T4sT8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/6w/6wXGCd5mkVq-mnxqCMy5Hh9fNde3WC_sObfTn4T4sT8.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/7m/7M80vQ6u4XNc1RdZK0ts7hYySmC4eX9Yzye2nIT6zfY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/7m/7M80vQ6u4XNc1RdZK0ts7hYySmC4eX9Yzye2nIT6zfY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/84/84GYUt8j2clHtaLxF72zxLlnhE75JbXpVzUZ2CVqAo4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/84/84GYUt8j2clHtaLxF72zxLlnhE75JbXpVzUZ2CVqAo4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/AP/ap7J4sn0P1Ug6tOJRSfJwdU0YSnYIkEhZZSrCT54bK4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/AP/ap7J4sn0P1Ug6tOJRSfJwdU0YSnYIkEhZZSrCT54bK4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/AS/aSX3Uu1lSQHWWs5_q2RqK41jIPG6_ihYcXqZEwSPfKo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/AS/aSX3Uu1lSQHWWs5_q2RqK41jIPG6_ihYcXqZEwSPfKo.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ai/aiL7mYnizqGhgY6aLWYBZCcxPSPu3G7JmB2kL2r3gfE.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ai/aiL7mYnizqGhgY6aLWYBZCcxPSPu3G7JmB2kL2r3gfE.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Aw/AwxaQr9sMw0pgJOwOKraJglG-fYHNkekbYMNEpRcssw.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Aw/AwxaQr9sMw0pgJOwOKraJglG-fYHNkekbYMNEpRcssw.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ay/Ay46CBQQ4zLjeiX69lF1uisN3GxLGIY-F5FnOC0eLUo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ay/Ay46CBQQ4zLjeiX69lF1uisN3GxLGIY-F5FnOC0eLUo.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/B6/B6Xx8XMXvFKrYcHybftSPOsuT63Wq4Rp7YW02y-CZAE.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/B6/B6Xx8XMXvFKrYcHybftSPOsuT63Wq4Rp7YW02y-CZAE.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Be/BerZw50qTHi9NMO_vCvcKHzjMZzxaI97FIYT_JRA2cY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Be/BerZw50qTHi9NMO_vCvcKHzjMZzxaI97FIYT_JRA2cY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Bs/bSEkzQ58t2aGSO1YqjOhAMvXTnG1S9k9gcCXcnBL6xg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Bs/bSEkzQ58t2aGSO1YqjOhAMvXTnG1S9k9gcCXcnBL6xg.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/CB/CB3GZ1z7wZqIw_jFQS0cj9UFOrq_9XHPwwxE0HBT9Ow.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/CB/CB3GZ1z7wZqIw_jFQS0cj9UFOrq_9XHPwwxE0HBT9Ow.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/CI/CIG7MKcXSQTXCXKE3WccHMAzy-sYumulPN0HXgEMufY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/CI/CIG7MKcXSQTXCXKE3WccHMAzy-sYumulPN0HXgEMufY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/DL/dlxlZZd5Sb_LT85u5j1gHjW_bVtcTCjOBbu6kuVarrQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/DL/dlxlZZd5Sb_LT85u5j1gHjW_bVtcTCjOBbu6kuVarrQ.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Dp/dpymPkZbQ9yaaSQdh-i_31MGDD4P3-6eUoJMLhZ1Ogo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Dp/dpymPkZbQ9yaaSQdh-i_31MGDD4P3-6eUoJMLhZ1Ogo.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/EY/EYGFinv49HH-0nLoMaLN49mF4SHoYSBaA3T3AZOy_KQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/EY/EYGFinv49HH-0nLoMaLN49mF4SHoYSBaA3T3AZOy_KQ.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/FE/FEchfOmPk9vOBbS2dVUuoaqpWZ4i6zJ0LyeAVzZahy4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/FE/FEchfOmPk9vOBbS2dVUuoaqpWZ4i6zJ0LyeAVzZahy4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/GR/grWTW0iaM8awVRFL5EkobnX-sYnsA1D9Xy2rSCnlB78.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/GR/grWTW0iaM8awVRFL5EkobnX-sYnsA1D9Xy2rSCnlB78.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HE/hemjXOPJDF4U6qlbrUG1XKuzlCvgjGiT_v9M-iy1caQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HE/hemjXOPJDF4U6qlbrUG1XKuzlCvgjGiT_v9M-iy1caQ.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HS/Hs4Jfkb0YvqW484su1IXVJqASzpKJPr4m453qDwmN8c.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HS/Hs4Jfkb0YvqW484su1IXVJqASzpKJPr4m453qDwmN8c.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/K4/k4sIKgz1yqSDgb-09jU9bA9cuLdcklaJQuIBT2jX7ic.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/K4/k4sIKgz1yqSDgb-09jU9bA9cuLdcklaJQuIBT2jX7ic.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/LV/LVPx8_DHEaBx0A09g3-wB2c5lYK1W6Ga7SJoU16rVjc.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/LV/LVPx8_DHEaBx0A09g3-wB2c5lYK1W6Ga7SJoU16rVjc.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Oh/OhKRs7T7CSEp4wzh9vnJrllXyOOVhhP-pG8xPRr-FXY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Oh/OhKRs7T7CSEp4wzh9vnJrllXyOOVhhP-pG8xPRr-FXY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/PL/PlWMV7aheU3F8ZW6K04pdnM9oPzGmV08Exr3nxczo-4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/PL/PlWMV7aheU3F8ZW6K04pdnM9oPzGmV08Exr3nxczo-4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/QH/qh19IMPxuGp6EMI2uIpCHGSZfVpFh7wwE2VTXzVXhXo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/QH/qh19IMPxuGp6EMI2uIpCHGSZfVpFh7wwE2VTXzVXhXo.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/RS/RsDrOf3YuuEnIf3Mw_fPgrDnWMSGIPWFMJEagnf8luQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/RS/RsDrOf3YuuEnIf3Mw_fPgrDnWMSGIPWFMJEagnf8luQ.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SI/Si1o4oxgE5xAnd9KuNN0lj9_6qsd03b5sSSoycNcf4c.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SI/Si1o4oxgE5xAnd9KuNN0lj9_6qsd03b5sSSoycNcf4c.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SU/sUqnKmbcJscNPuaEiM0JbrQSQBCNTkFoflSEJzMoGjA.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/SU/sUqnKmbcJscNPuaEiM0JbrQSQBCNTkFoflSEJzMoGjA.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/VE/VeSVEwJSPsvrsNNdi3farg_qciI8PA5X8JvxxWKaWCw.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/VE/VeSVEwJSPsvrsNNdi3farg_qciI8PA5X8JvxxWKaWCw.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Vg/VG-z6Id9IBpw9QMUDRuASJ0w3UtCWglml_NGXF-cvRM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Vg/VG-z6Id9IBpw9QMUDRuASJ0w3UtCWglml_NGXF-cvRM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Vs/VS5qVFfQxFpMikMFZNH99lDJ2hDnKkv9n-t8frJSLNc.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Vs/VS5qVFfQxFpMikMFZNH99lDJ2hDnKkv9n-t8frJSLNc.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XG/xgmeapUdbH_KFzAy9GJ6NnxxxB7UgygNbn5FQBI0Yv0.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XG/xgmeapUdbH_KFzAy9GJ6NnxxxB7UgygNbn5FQBI0Yv0.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XM/XM8FpczegnYF2gIINg7aaaOYYk09jNV6n-mNvDfJGLs.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XM/XM8FpczegnYF2gIINg7aaaOYYk09jNV6n-mNvDfJGLs.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XZ/xZB6sV90tIq47H5USFblDPHA9XdnRufVL1DuCI2Ak-w.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/XZ/xZB6sV90tIq47H5USFblDPHA9XdnRufVL1DuCI2Ak-w.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Xl/xl8RlrAupCVJGrbsY3zeMRl_n9YtEyN-FO2J8recdGw.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Xl/xl8RlrAupCVJGrbsY3zeMRl_n9YtEyN-FO2J8recdGw.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/YU/Yu40BFzXYb9g-6OmBJTNQQyKJtYCVboOa1_aK9vucI4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/YU/Yu40BFzXYb9g-6OmBJTNQQyKJtYCVboOa1_aK9vucI4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZT/ztoNpqYTynZ-1KBf8hhpIdDJcUeGMrOadijewDSI56I.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ZT/ztoNpqYTynZ-1KBf8hhpIdDJcUeGMrOadijewDSI56I.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/_x/_XmyWQOmAH_7_R1GAVJtlxNZ_N11pBWnAmAr5CbvYBs.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/_x/_XmyWQOmAH_7_R1GAVJtlxNZ_N11pBWnAmAr5CbvYBs.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/c7/c7RzWFA-U1JtY9shI0gHZsKKcX8TF3EValaTIgNv8k8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/c7/c7RzWFA-U1JtY9shI0gHZsKKcX8TF3EValaTIgNv8k8.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/dK/dk4rbY96rvK5cyGuHfNDNgPAPyQBLMllBig3cn0wIfY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/dK/dk4rbY96rvK5cyGuHfNDNgPAPyQBLMllBig3cn0wIfY.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/fp/fPWxIofrB3AmVOyhZNMj38Oad_BRNYJwNdLaO5Bg8PM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/fp/fPWxIofrB3AmVOyhZNMj38Oad_BRNYJwNdLaO5Bg8PM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/iC/IcbUFAbpdaKDOkpn6HTOemhCbjnRTvgLRmLut-pi3zQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/iC/IcbUFAbpdaKDOkpn6HTOemhCbjnRTvgLRmLut-pi3zQ.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/mg/mGNSsElaJxeKX6Prs1H-zNFx9gjKBmW62LWMvjO4Owc.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/mg/mGNSsElaJxeKX6Prs1H-zNFx9gjKBmW62LWMvjO4Owc.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/sc/SC9-00oZ4qEPJeoKwN3Nrrnz9P_GD8LZXqKEjM10e2E.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/sc/SC9-00oZ4qEPJeoKwN3Nrrnz9P_GD8LZXqKEjM10e2E.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/tV/TvYvNRZ7k5JnILP5srBpQhjlG1SaFHtGkLN1W8rZW6Y.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/tV/TvYvNRZ7k5JnILP5srBpQhjlG1SaFHtGkLN1W8rZW6Y.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/zx/ZXapX7gUIjLvMV6O4tXxKlngMsrGkQ4Xd-YZVFHWSjM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/zx/ZXapX7gUIjLvMV6O4tXxKlngMsrGkQ4Xd-YZVFHWSjM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TimeIt.iml" afterPath="$PROJECT_DIR$/.idea/TimeIt.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/offers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/offers_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/offer.rb" afterPath="$PROJECT_DIR$/app/models/offer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/frame/verMisOfertas.html.erb" afterPath="$PROJECT_DIR$/app/views/frame/verMisOfertas.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/frame/verOfertas.html.erb" afterPath="$PROJECT_DIR$/app/views/frame/verOfertas.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/offers/_detalles.html.erb" afterPath="$PROJECT_DIR$/app/views/offers/_detalles.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20171008060822_create_offers.rb" afterPath="$PROJECT_DIR$/db/migrate/20171008060822_create_offers.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -20,63 +77,46 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="TimeIt" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="perfilPublico.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/frame/perfilPublico.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_detalles.html.erb" pinned="false" current-in-tab="false">
+    <leaf>
+      <file leaf-file-name="_detalles.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/offers/_detalles.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="45" />
+            <state relative-caret-position="574">
+              <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/requests/_form.html.erb">
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="420">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.js.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/requests/create.js.erb">
+      <file leaf-file-name="offers_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/offers_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+            <state relative-caret-position="259">
+              <caret line="73" column="7" lean-forward="false" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requests_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/requests_controller.rb">
+      <file leaf-file-name="verMisOfertas.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/frame/verMisOfertas.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/requests/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="26" column="64" lean-forward="false" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -93,6 +133,8 @@
       <find>cate</find>
       <find>card</find>
       <find>soli</find>
+      <find>edit</find>
+      <find>edit_offer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,31 +145,34 @@
       <list>
         <option value="$PROJECT_DIR$/app/views/offers/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/requests/_int.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/offer.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/offers/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/offers_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/frame/perfilPublico.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/frame_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/frame/perfilPublicoCompleto.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/frame/verOfertas.html.erb" />
         <option value="$PROJECT_DIR$/app/views/frame/_avisoSolicitar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/frame/verificar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/frame/_verificar.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/offers/_detalles.html.erb" />
         <option value="$PROJECT_DIR$/app/views/offers/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/frame/_oferta.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/frame/prueba.html.erb" />
         <option value="$PROJECT_DIR$/app/views/frame/categorias.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_basicInfo.html.erb" />
         <option value="$PROJECT_DIR$/app/views/requests/_perfilPublico.html.erb" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db TimeIt/ofertas_categorias.csv" />
         <option value="$PROJECT_DIR$/db TimeIt/categorias.csv" />
         <option value="$PROJECT_DIR$/app/controllers/requests_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/requests/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/requests/create.js.erb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/app/views/frame/verOfertas.html.erb" />
+        <option value="$PROJECT_DIR$/test/controllers/offers_controller_test.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20171008060822_create_offers.rb" />
+        <option value="$PROJECT_DIR$/app/models/offer.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/frame/verMisOfertas.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/offers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/offers/_detalles.html.erb" />
       </list>
     </option>
   </component>
@@ -137,7 +182,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1245" />
     <option name="height" value="716" />
@@ -157,9 +202,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,12 +220,6 @@
               <item name="TimeIt" type="b2602c69:ProjectViewProjectNode" />
               <item name="TimeIt" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TimeIt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TimeIt" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -189,12 +227,7 @@
               <item name="TimeIt" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="requests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TimeIt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TimeIt" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="frame" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TimeIt" type="b2602c69:ProjectViewProjectNode" />
@@ -204,12 +237,19 @@
             <path>
               <item name="TimeIt" type="b2602c69:ProjectViewProjectNode" />
               <item name="TimeIt" type="462c0819:PsiDirectoryNode" />
-              <item name="db TimeIt" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TimeIt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TimeIt" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="migrate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,41 +298,51 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37280000" />
+    <option name="totallyTimeSpent" value="46178000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1245" height="716" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2817955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.49470899" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.505291" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2817955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2657512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2817955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -313,74 +363,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/frame/verOFertas.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/frame/verificar.html.erb" />
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/frame/agregarOferta.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/frame/_avisoSolicitar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="66" lean-forward="true" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/frame/_pestanasPrincipales.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/frame/_verificar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/frame/_oferta.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/fondo.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/offers/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bank1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/cate3.png" />
     <entry file="file://$PROJECT_DIR$/public/bank2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -404,13 +386,6 @@
     <entry file="file://$PROJECT_DIR$/public/comida.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/frame/verOfertas.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/ver_oferta.scss">
@@ -459,14 +434,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/cate7.jpg" />
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/frame/prueba.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -494,14 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
           <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -565,7 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -573,14 +531,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/requests/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/offers/_detalles.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/requests/create.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="45" />
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <marker date="1510110316000" expanded="true" signature="280:447" ph="default: &lt;6 keys&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/frame/_oferta.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/frame/_pestanasPrincipales.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/offers/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/offers_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/frame_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/offers/show.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -593,22 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/requests/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/requests/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/requests_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -617,10 +623,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/requests/create.js.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/requests/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/offers/_offer.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/frame/_avisoSolicitar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="66" lean-forward="false" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/frame/verOfertas.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="63" column="10" lean-forward="true" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/offer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20171008060822_create_offers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/frame/verMisOfertas.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="64" lean-forward="false" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/offers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="73" column="7" lean-forward="false" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/offers/_detalles.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
           <folding />
         </state>
       </provider>
