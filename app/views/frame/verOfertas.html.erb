@@ -12,52 +12,56 @@
 				<% if @cate != "0" %>		 	 		
 					<% @ver_oferta_categoria.each do |offer| %>		 			
 						<% if offer.user_id != current_user.id %>
-							<ul class="list-unstyled">
-								<div class="row">
-									<div class="col-lg-4">
-										<div class="media-body">
-												<img width="200" height="200" class="d-flex mr-3" src=<%= offer.picture %>
-												alt="Generic placeholder image">
-										</div>
-									</div>
-									<div class="col-lg-5">
-										<div class="media-body">
-											<h2 class="mt-0 mb-0"> <%= offer.name %></h2>
-											<h6 class="mt-0 mb-3"><%= offer.description %></h6>
-										</div>	
-									</div>
-									<div class="col-lg-3">
-											<%= link_to "Ver mas", frame_perfilPublico_url(:offers => offer.id, 
-												:users => offer.user_id),
-												:class => "btn btn-outline-primary float-right" %>
-									</div>
-								</div>
-							</ul>	
+                 <% if offer.state != "desactivado"   %>
+                    <ul class="list-unstyled">
+                      <div class="row">
+                        <div class="col-lg-4">
+                          <div class="media-body">
+                              <img width="200" height="200" class="d-flex mr-3" src=<%= offer.picture %>
+                              alt="Generic placeholder image">
+                          </div>
+                        </div>
+                        <div class="col-lg-5">
+                          <div class="media-body">
+                            <h2 class="mt-0 mb-0"> <%= offer.name %></h2>
+                            <h6 class="mt-0 mb-3"><%= offer.description %></h6>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <%= link_to "Ver mas", frame_perfilPublico_url(:offers => offer.id,
+                              :users => offer.user_id),
+                              :class => "btn btn-outline-primary float-right" %>
+                        </div>
+                      </div>
+                    </ul>
+                 <% end %>
 						<% end %>
 					<% end %>
 				<% else %>
 					<% @ver_oferta_todas.each do |offer| %>
-						<ul class="list-unstyled">
-							<div class="row">
-								<div class="col-lg-4">
-									<div class="media-body">
-										<img width="200" height="200" class="d-flex mr-3" src=<%= offer.picture %>
-											alt="Generic placeholder image">
-									</div>
-								</div>
-								<div class="col-lg-5">
-									<div class="media-body">
-										<h2 class="mt-0 mb-0"> <%= offer.name %></h2>
-										<h6 class="mt-0 mb-3"><%= offer.description %></h6>
-									</div>	
-								</div>
-								<div class="col-lg-3">
-										<%= link_to "Ver mas", frame_perfilPublico_url(:offers => offer.id,
-											:users => offer.user_id),
-											:class => "btn btn-outline-primary float-right" %>
-								</div>
-						 	</div>
-						</ul>			  				  				
+              <% if offer.state != "desactivado" %>
+                <ul class="list-unstyled">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="media-body">
+                        <img width="200" height="200" class="d-flex mr-3" src=<%= offer.picture %>
+                          alt="Generic placeholder image">
+                      </div>
+                    </div>
+                    <div class="col-lg-5">
+                      <div class="media-body">
+                        <h2 class="mt-0 mb-0"> <%= offer.name %></h2>
+                        <h6 class="mt-0 mb-3"><%= offer.description %></h6>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <%= link_to "Ver mas", frame_perfilPublico_url(:offers => offer.id,
+                          :users => offer.user_id),
+                          :class => "btn btn-outline-primary float-right" %>
+                    </div>
+                  </div>
+                </ul>
+              <% end %>
 					<% end %>
 				<% end %>
 			</div>	

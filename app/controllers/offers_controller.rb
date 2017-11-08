@@ -76,7 +76,7 @@ class OffersController < ApplicationController
 
   def eliminar
     @offer_id = params[:offer_id]
-    @offer = Offer.where(id = @offer_id)
+    @offer = Offer.where(:id => @offer_id)
     @offer.each do |offer|
         offer.update_attribute(:state, "desactivado")
     end

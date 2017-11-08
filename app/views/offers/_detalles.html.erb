@@ -45,8 +45,7 @@
                 <div class="media-body">
                     <h6 class="mt-0 mb-3"><%= @offer.description %></h6>
                 </div>
-                <%=link_to "Eliminar", { :controller => "offers", :action => "eliminar", :locals => {:offer_id => @offer.id}}, :class => "btn btn-outline-primary float-right" %>
-
+              <%=link_to "Eliminar", { :controller => "offers", :action => "eliminar", :offer_id => @offer.id}, :class => "btn btn-outline-primary float-right" %>
                 <%= link_to "Editar", edit_offer_path(@offer),
                     :class => "btn btn-outline-primary float-right" %>
             </div>
