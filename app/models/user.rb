@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 
+
   has_attached_file :photo, styles: { medium: "300x300>", thumb: "100x100>" }
   has_attached_file :photoId1, styles: { medium: "300x300>", thumb: "100x100>" }
   has_attached_file :photoId2, styles: { medium: "300x300>", thumb: "100x100>" }
@@ -33,7 +34,7 @@ class User < ApplicationRecord
   validates :photo, presence: true
   validates :photoId1, presence: true
   validates :photoId2, presence: true
-  
+  validates :description, length: { maximum: 200 }
   #validates :edad, numericality: { only_integer: true }
 
 end

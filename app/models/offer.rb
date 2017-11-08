@@ -6,5 +6,10 @@ class Offer < ApplicationRecord
     has_many :contracts
     belongs_to :category
 
+    validates :name, length: { maximum: 50 }
+    validates :description, length: { maximum: 400 }
+    validates :picture, presence: true
+    validates :category, presence: true
+
     #has_many :users, through: :requests
 end
