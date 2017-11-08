@@ -11,7 +11,7 @@
 
 		<div class="container card-body">
 			<% @ver_oferta_unicas.each do |offer| %>
-          <% if offer.state   %>
+          <% if offer.state != "desactivado" %>
             <ul class="list-unstyled">
               <div class="row">
                 <div class="col-lg-4">

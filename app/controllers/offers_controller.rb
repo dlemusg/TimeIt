@@ -78,7 +78,7 @@ class OffersController < ApplicationController
     @offer_id = params[:offer_id]
     @offer = Offer.where(id = @offer_id)
     @offer.each do |offer|
-        offer.state = FALSE
+        offer.update_attribute(:state, "desactivado")
     end
     redirect_to frame_verMisOfertas_path
 
