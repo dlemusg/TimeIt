@@ -35,6 +35,7 @@ class User < ApplicationRecord
   validates :photoId1, presence: true
   validates :photoId2, presence: true
   validates :description, length: { maximum: 200 }
+  
   #validates :edad, numericality: { only_integer: true }
 
 end
