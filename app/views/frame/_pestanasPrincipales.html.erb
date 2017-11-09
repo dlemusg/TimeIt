@@ -44,7 +44,7 @@
 	<div class="dropdown">
 		<button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
 			<span class="caret"></span></button>
-		<ul class="dropdown-menu">
+		<ul class="dropdown-menu" style="right: 0; left: auto;">
 			<%= link_to 'Modificar Cuenta', edit_user_registration_path, :class => "btn btn-outline-secundary" %>
 			<%= link_to 'Transacciones', href="/frame/historial", :class => "btn btn-outline-secundary" %>
 			<%= link_to 'Salir', destroy_user_session_path, method: :delete, :class => "btn btn-outline-secundary" %>
