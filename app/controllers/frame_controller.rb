@@ -81,7 +81,12 @@ class FrameController < ApplicationController
     @ver_perfil_publico = User.where(:id => @user)
     @ofid = params[:offers]
     @request = Request.new  
-    @offer = Offer.where(:id => @ofid)
+    @offer = Offer.find_by_id(@ofid)
+    @ofcategory = Offer.where(:category_id => @offer.category_id)
+                       .where.not(:user_id => current_user,:id => @offer.id).limit(3).reverse
+    if @ofcategory.size < 3
+      @ofcategory = Offer.where.not(:user_id => current_user,:id => @offer.id).limit(3).reverse
+    end
   end
 
 

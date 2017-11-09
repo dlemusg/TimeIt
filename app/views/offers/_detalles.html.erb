@@ -1,54 +1,67 @@
-<%if locals[:variable] == "publico"%>
-    <%@offer.each do |of| %>
-        <div class="container card-body">
-            <h2 class="mt-0 mb-0"> <%= of.name %></h2>
-            <h11 class="mt-0 mb-0"><%= of.category.name %></h11>
-            <h10 class="mt-0 mb-3"> <%= '    -    ' %></h10>
-            <h10 class="mt-0 mb-3"> <%= of.created_at.strftime("Publicado %F")%></h10>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="media-body">
-                        <img width="400" height="400" class="d-flex mr-3" src=<%= of.picture %>
-                        alt="Generic placeholder image">
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="media-body">
-                        <h6 class="mt-0 mb-3"><%= of.description %></h6>
-                    </div>
-                    <% if !current_user.verified %>
-                        <%= render 'verificar' %>
-                    <% elsif Request.exists?(offer_id: of.id, user_id: of.user_id)%>
-                        <%=render 'avisoSolicitar'%>
-                    <% else %>
-                        <%= render "requests/form", request: @request, :locals => {
-                          :idOffer => of.id ,:idUser => of.user_id, :idD => current_user.id} %>
-                    <% end %>
-                </div>
-            </div>	
-        </div>
-    <%end%>
-<% elsif locals[:variable] == "privado"%>
-    <div class="container card-body">
-        <h2 class="mt-0 mb-0"> <%= @offer.name %></h2>
-        <h11 class="mt-0 mb-0"><%= @offer.category.name %></h11>
-        <h10 class="mt-0 mb-3"> <%= '    -    ' %></h10>
-        <h10 class="mt-0 mb-3"> <%= @offer.created_at.strftime("Publicado %F")%></h10>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="media-body">
-                    <img width="400" height="400" class="d-flex mr-3" src=<%= @offer.picture %>
+<div class="container card-body">
+    <h2 class="mt-0 mb-0"> <%= @offer.name %></h2>
+    <h11 class="mt-0 mb-0"><%= @offer.category.name %></h11>
+    <h10 class="mt-0 mb-3"> <%= '    -    ' %></h10>
+    <h10 class="mt-0 mb-3"> <%= @offer.created_at.strftime("Publicado %F")%></h10>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="media-body">
+                <img width="400" height="400" class="d-flex mr-3" src=<%= @offer.picture %>
                     alt="Generic placeholder image">
-                </div>
             </div>
-            <div class="col-lg-5">
-                <div class="media-body">
-                    <h6 class="mt-0 mb-3"><%= @offer.description %></h6>
-                </div>
-              <%=link_to "Eliminar", { :controller => "offers", :action => "eliminar", :offer_id => @offer.id}, :class => "btn btn-outline-primary float-right" %>
+        </div>
+        <div class="col-lg-5">
+            <div class="media-body">
+                <h6 class="mt-0 mb-3"><%= @offer.description %></h6>
+            </div>
+            <% if locals[:variable] == "privado"%>
+                <%=link_to "Eliminar", { :controller => "offers", :action => "eliminar", 
+                    :offer_id => @offer.id}, :class => "btn btn-outline-primary float-right" %>
                 <%= link_to "Editar", edit_offer_path(@offer),
                     :class => "btn btn-outline-primary float-right" %>
-            </div>
+            <%elsif locals[:variable] == "publico"%>
+                <% if !current_user.verified %>
+                    <%= render 'verificar' %>
+                <% elsif Request.exists?(offer_id: @offer.id, user_id: @offer.user_id)%>
+                    <%=render 'avisoSolicitar'%>
+                <% else %>
+                    <%= render "requests/form", request: @request, :locals => {
+                        :idOffer => @offer.id ,:idUser => @offer.user_id, :idD => current_user.id} %>
+                <% end %>
+            <% end %>
         </div>
-    </div>	
-<%end%>
+    </div>
+        <%if locals[:variable] == "publico"%>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-5">
+                        <div class="text-center">
+                            <h1 class="mt-0 mb-0">Otras ofertas</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-9">
+                        <div class="btn-group" role="group" aria-label="First group">
+                            <%@ofcategory.each do |other| %>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <a href='perfilPublico?offers=<%=other.id%>&users=<%=other.user_id%>'>
+                                        <button type="link" class="btn btn-outline-secondary">
+                                            <img width="150" height="150" class="d-flex mr-3" src=<%= other.picture %>
+                                                alt="Generic placeholder image">
+                                            <h11 class="mt-0 mb-0"><%= other.name %></h11>
+                                        </button>
+                                    </a>       
+                                </div>
+                            <%end%>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div> 
+            </div>
+        <%end%>
+    </div>
+</div>
