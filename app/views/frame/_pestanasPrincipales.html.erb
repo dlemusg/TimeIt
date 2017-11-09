@@ -1,5 +1,5 @@
 
- <ul class="nav nav-tabs card-header-tabs">
+<ul class="nav nav-tabs card-header-tabs">
 
 	<li class="nav-item">
 		<a class="nav-link <%= locals[:variable1] %>" href="/frame/inicio">Inicio</a>
@@ -15,38 +15,44 @@
 	</li>		     
 	<li class="nav-item">
 		<a class="nav-link <%= locals[:variable5] %>" href="/frame/verMisOfertas">Mis ofertas</a>
-	</li>	 
-	<li class="nav-item">
-		<a class="nav-link <%= locals[:variable6] %>" href="/frame/historial">Transacciones</a>
 	</li>	           
 </ul>
 			  
 
 <div class="btn-group">
-  <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">Notificaciones  
-   <span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%> 
-   </span></button>
-  <div class="dropdown-menu" style="right: 0; left: auto;"> 
-  	<% if @userRequest != nil and Request.exists? and @ver_oferta_todas2 != nil and Offer.exists?%> 
-  		<% @userRequest.each do |userq| %>
-		  	<% @ver_oferta_todas2.each do |offer| %> 
-		  		<% if userq.offer_id == offer.id %>											
-					<div class="dropdown-divider"></div>	
-					<% @nom_notif = User.where(id: userq.idDemandante).first.firstName%>
-					<% @ofer_notif = offer.name%>
-					<% @id_notif = userq%>
-					<a class="dropdown-item" href="#notificacion" data-toggle="modal">
-						<strong>Oferta: </strong><%=offer.name%>
-						<p><strong>Usuario: </strong><%= User.where(id: userq.idDemandante).first.firstName%> </p>						
-					</a> 
+	<button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">Notificaciones  
+   		<span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%> 
+   	</span></button>
+  	<div class="dropdown-menu" style="right: 0; left: auto;"> 
+  		<% if @userRequest != nil and Request.exists? and @ver_oferta_todas2 != nil and Offer.exists?%> 
+			<% @userRequest.each do |userq| %>
+				<% @ver_oferta_todas2.each do |offer| %> 
+					<% if userq.offer_id == offer.id %>											
+						<div class="dropdown-divider"></div>	
+						<% @nom_notif = User.where(id: userq.idDemandante).first.firstName%>
+						<% @ofer_notif = offer.name%>
+						<% @id_notif = userq%>
+						<a class="dropdown-item" href="#notificacion" data-toggle="modal">
+							<strong>Oferta: </strong><%=offer.name%>
+							<p><strong>Usuario: </strong><%= User.where(id: userq.idDemandante).first.firstName%> </p>						
+						</a> 
+					<% end %>
+				<% end %>	
+			<% end %>		 
+		<% end %> 
+	</div>
+	<div class="dropdown">
+		<button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+			<span class="caret"></span></button>
+		<ul class="dropdown-menu">
+			<%= link_to 'Modificar Cuenta', edit_user_registration_path, :class => "btn btn-outline-secundary" %>
+			<%= link_to 'Transacciones', href="/frame/historial", :class => "btn btn-outline-secundary" %>
+			<%= link_to 'Salir', destroy_user_session_path, method: :delete, :class => "btn btn-outline-secundary" %>
+		</ul>
+	</div> 
+</div> 
 
 
-				<% end %>
-			<% end %>	
-		<% end %>		 
-	<% end %> 
-  </div>
-</div>
 
 
 
