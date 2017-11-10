@@ -97,5 +97,13 @@ class FrameController < ApplicationController
     @oferta_publica = Offer.where(:user_id => @user)
   end
 
-
+  def contract
+    @offer_c = Offer.where(user_id: current_user)
+    @contract_o = Contract.where(offer_id: @offer_c)
+    @user_cliente = Contract.where(user_id: current_user)
+    @user_ofertante = Contract.where(id: @contract_o)
+    @offer_cliente = @user_clinete.offer_id
+    @oferta_completa = Offer.where(id: @offer_cliente)
+    @oferta_usuario = User.where(id: @offer_cliente.user_id)
+  end
 end

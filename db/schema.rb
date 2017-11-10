@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171021225700) do
+ActiveRecord::Schema.define(version: 20171110180817) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "namespace"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20171021225700) do
   end
 
   create_table "califications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.float "value", limit: 5, null: false
+    t.float "value", limit: 24, null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -73,11 +73,14 @@ ActiveRecord::Schema.define(version: 20171021225700) do
   end
 
   create_table "contracts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "offer_id"
     t.integer "state"
     t.integer "value"
-    t.float "time", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["offer_id"], name: "index_contracts_on_offer_id"
+    t.index ["user_id"], name: "index_contracts_on_user_id"
   end
 
   create_table "offers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -151,6 +154,8 @@ ActiveRecord::Schema.define(version: 20171021225700) do
   end
 
   add_foreign_key "califications", "users"
+  add_foreign_key "contracts", "offers"
+  add_foreign_key "contracts", "users"
   add_foreign_key "offers", "categories"
   add_foreign_key "offers", "users"
   add_foreign_key "requests", "offers"

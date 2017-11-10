@@ -1,9 +1,18 @@
-<%= form_with(model: @contracts, remote: true) do |form| %>
+<%= form_with(model: contract_url, local: true) do |form| %>
+  <% if contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
 
-
-    <div class="actions">
-      <%= form.submit "Aceptar",
-                      :class => "btn btn-outline-primary float-right" %>
+      <ul>
+      <% contract.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
+  <% end %>
 
+  <div class="actions">
+    <%= form.submit"Aceptar",
+                   :class => "btn btn-outline-primary float-right" %> %>
+  </div>
 <% end %>

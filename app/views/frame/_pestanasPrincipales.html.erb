@@ -17,7 +17,45 @@
 		<a class="nav-link <%= locals[:variable5] %>" href="/frame/verMisOfertas">Mis ofertas</a>
 	</li>	           
 </ul>
-			  
+
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+    <span class="badge badge-dark">
+      <%=Contract.where(user_id: current_user.id).count + Contract.where(id: @contract_o).count%>
+   	</span></button>
+  <div class="dropdown-menu" style="right: 0; left: auto;">
+    <% if (@user_cliente != nil or @user_ofertante != nil) and Contract.exists? %>
+        <ul>
+          Mías
+          <% @user_ofertante.each do |contract| %>
+            <% @offer_c.each do |offer| %>
+              <%if contract.offer_id == offer.id %>
+                  <div class="dropdown-divider">Mías</div>
+                      <a class="dropdown-item" href="#notificacion" data-toggle="modal">
+                        <strong>Oferta: </strong><%=offer.name%>
+                        <p><strong>Usuario: </strong><%= User.where(id: Contract.user_id).first.firstName%> </p>
+                      </a>
+                  <%end%>
+              <%end%>
+          <%end%>
+        </ul>
+        <ul>
+          Solicitadas
+          <% @user_cliente.each do |contract| %>
+            <% @oferta_completa.each do |offer| %>
+              <% if contract.offer_id == offer %>
+                  <div class="dropdown-divider">Solicitadas</div>
+                  <a class="dropdown-item" href="#notificacion" data-toggle="modal">
+                    <strong>Oferta: </strong><%=offer.name%>
+                    <p><strong>Usuario: </strong><%= User.where(id: @oferta_usuario).first.firstName%> </p>
+                  </a>
+               <%end%>
+             <%end%>
+          <%end%>
+        </ul>
+    <%end%>
+  </div>
 
 <div class="btn-group">
 	<button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
@@ -42,6 +80,8 @@
 			<% end %>		 
 		<% end %> 
 	</div>
+
+
 	<div class="dropdown">
 		<button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
 			<span class="caret"></span></button>
