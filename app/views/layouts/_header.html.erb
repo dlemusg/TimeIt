@@ -2,13 +2,18 @@
 <nav class="navbar navbar-dark navbar-inverse bg-dark navbar-static-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header"> 
-            <a class="navbar-brand" href="#"><h2><strong>TimeIt</strong></h2></a>
+            <!--<a class="navbar-brand" href="#"><h2><strong>TimeIt</strong></h2></a>-->
+            <a class="navbar-brand" href="#">
+
+                    <img style="max-width:80px; margin-top: -7px;"
+                    src="../../../timeitlogo.png">
+                </a>
         </div>
         <form class="navbar-form navbar-left">
             <%= form_for :term, url: offers_path, method: :get do |form| %>
                 <form class="form-inline">
                     <%= text_field_tag :term, params[:term], placeholder: "Busqueda..." %>            
-                    <%= submit_tag "Busqueda", 
+                    <%= submit_tag "Buscar", 
                     class: "btn btn-outline-info my-2 my-sm-0", type: "submit" %>
                 </form>      
             <% end %>
