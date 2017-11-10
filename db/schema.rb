@@ -57,9 +57,11 @@ ActiveRecord::Schema.define(version: 20171021225700) do
   end
 
   create_table "califications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "value", null: false
+    t.float "value", limit: 5, null: false
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_califications_on_user_id"
   end
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -71,15 +73,9 @@ ActiveRecord::Schema.define(version: 20171021225700) do
   end
 
   create_table "contracts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "state"
+    t.integer "state"
     t.integer "value"
-    t.datetime "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "currencies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "value", null: false
+    t.float "time", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -122,7 +118,7 @@ ActiveRecord::Schema.define(version: 20171021225700) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.integer "calification"
+    t.integer "calification", default: 0, null: false
     t.string "typeId", default: "", null: false
     t.string "firstName", default: "", null: false
     t.string "secondName", default: ""
@@ -154,6 +150,7 @@ ActiveRecord::Schema.define(version: 20171021225700) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "califications", "users"
   add_foreign_key "offers", "categories"
   add_foreign_key "offers", "users"
   add_foreign_key "requests", "offers"
