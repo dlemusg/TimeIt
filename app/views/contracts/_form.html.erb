@@ -1,0 +1,9 @@
+<%= form_with(model: @contracts, remote: true) do |form| %>
+
+
+    <div class="actions">
+      <%= form.submit "Aceptar",
+                      :class => "btn btn-outline-primary float-right" %>
+    </div>
+
+<% end %>

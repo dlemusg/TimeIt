@@ -20,8 +20,9 @@
 			  
 
 <div class="btn-group">
-	<button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">Notificaciones  
-   		<span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%> 
+	<button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+    <i class="fa fa-users "  aria-hidden="true"></i>
+    <span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%>
    	</span></button>
   	<div class="dropdown-menu" style="right: 0; left: auto;"> 
   		<% if @userRequest != nil and Request.exists? and @ver_oferta_todas2 != nil and Offer.exists?%> 
@@ -72,13 +73,12 @@
 				<%=@nom_notif%> desea solicitar el servicio "<%=@ofer_notif%>"
 			</div>
 			<div class="modal-footer">
-			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal" href="#acep_notificacion" data-toggle="modal">Aceptar</button>	
+        <%=link_to "Aceptar", { :controller => "contracts", :action => "create"}, :class => "btn btn-outline-primary float-right" %>
 			    <% if @id_notif != nil %>
 			    	<%= button_to "Rechazar", @id_notif, :method => :delete, :class=>"btn btn-outline-primary float-right"%>    		
 			  	<% end %>	
 			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Posponer</button>
 			</div>
-
 
 
 		</div>
