@@ -54,6 +54,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string  :location,       null:false, default: ""
       t.string  :direccion,      null:false, default:""
       t.string  :description
+      t.integer :calification,           null:false, default: 0
 
 
       t.timestamps null: false

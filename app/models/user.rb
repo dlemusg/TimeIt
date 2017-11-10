@@ -18,6 +18,7 @@ class User < ApplicationRecord
   #belongs_to :administrador, foreign_key: "administradors_id"
   has_many :offers
   has_many :contracts
+  has_many :califications
  # has_many :offers, through: :requests
  # belongs_to :tiempo, foreign_key: "tiempos_id"
 
