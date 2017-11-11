@@ -30,8 +30,9 @@
    	</span></button>
   <div class="dropdown-menu" style="right: 0; left: auto;" role="menu">
     <% if @user_cliente != nil or  @user_ofertante != nil%>
+        <div class="row">
         <ul>
-          Mías
+          <div class="col-sm-4">Mías
 
           <% (Contract.where(offer_id: @este)).each do |contract| %>
               <% @este.each do |offer| %>
@@ -47,10 +48,10 @@
                   <%end%>
                <% end %>
          <%end%>
-
+          </div>
         </ul>
         <ul>
-          Solicitadas
+          <div class="col-sm-4">Solicitadas
           <% @user_cliente.each do |contract| %>
              <% id = contract.offer_id %>
               <% offert = Offer.where(:id => id) %>
@@ -64,7 +65,11 @@
                   <%end%>
                <%end%>
            <%end%>
+          </div>
         </ul>
+
+        </div>
+
     <%end%>
   </div>
 

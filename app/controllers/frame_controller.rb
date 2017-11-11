@@ -48,7 +48,6 @@ class FrameController < ApplicationController
     @request = Request.new
 
     @este = Offer.where(user_id: current_user.id)
-    @este2 = Contract.where(offer_id: @este.id)
   end 
 
   def historial
@@ -75,7 +74,6 @@ class FrameController < ApplicationController
 
 
     @este = Offer.where(user_id: current_user.id)
-    @este2 = Contract.where(offer_id: @este.id)
   end
 
   def inicio
@@ -125,7 +123,6 @@ class FrameController < ApplicationController
 
 
     @este = Offer.where(user_id: current_user.id)
-    @este2 = Contract.where(offer_id: @este.id)
   end
 
   def verDetallesOferta
@@ -166,7 +163,6 @@ class FrameController < ApplicationController
 
 
     @este = Offer.where(user_id: current_user.id)
-    @este2 = Contract.where(offer_id: @este.id)
   end
  
   def perfilPublico
