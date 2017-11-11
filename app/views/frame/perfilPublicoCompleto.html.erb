@@ -20,7 +20,8 @@
                   <h2 class="mt-0 mb-1"><%= offer.name %></h2>
                   <%= offer.description %>
                 <div>
-                    <%= link_to "Ver más", frame_perfilPublico_url(:users => offer.user_id),:class => "btn btn-outline-primary float-right" %>
+                    <%= link_to "Ver más", frame_perfilPublico_url(:offers => offer.id, 
+                    :users => offer.user_id),:class => "btn btn-outline-primary float-right" %>
                 </div>
 
                 </div>

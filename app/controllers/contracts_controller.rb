@@ -9,7 +9,6 @@ class ContractsController < ApplicationController
   end
   
   def destroy
-
     @contract = Contract.find_by_id(params[:id])
     @contract.destroy
     respond_to do |format|
