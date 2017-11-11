@@ -1,4 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_contract_path(@contract) %> |
-<%= link_to 'Back', contracts_path %>
+<div class="container-fluid">
+	<%=render 'layouts/header'%>
+	<div class="row container-fluid">
+		<%=render 'layouts/basicInfo'%>
+		<div class="col container-fluid card">
+			<div class="container card-header">	  	
+				<nav class="navbar navbar-light bg-faded">
+					<%=render 'frame/pestanasPrincipales', locals: {variable5: "active"}%>	   
+				</nav>	 
+			</div>
+            <%= render "contracts/detalles", contract: @contract, locals: {variable: "privado"}  %>
+		</div>
+	</div>
+</div>
+    

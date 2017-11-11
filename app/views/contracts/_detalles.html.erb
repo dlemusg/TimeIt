@@ -1,0 +1,32 @@
+<div class="container card-body">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="media-body">
+                <img width="400" height="400" class="d-flex mr-3" src=<%= @contract.offer.picture %>
+                    alt="Generic placeholder image">
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="media-body">
+                <h2 class="mt-0 mb-0"> <%= @contract.offer.name %></h4>
+                <h6 class="mt-0 mb-3"><%= @contract.offer.description %></h6>
+                <% if @contract.value != nil %>
+                    <h4 class="mt-0 mb-0"> <%= "Tiempo" %></h4>
+                    <h4 class="mt-0 mb-3"> <%= @contract.value %> horas</h4>
+                    <h3 class="mt-0 mb-0"> Comentarios </h3>
+                    <h4 class="mt-0 mb-0">  por definir </h4>
+                    <h4 class="mt-0 mb-3"> <%= @contract.comments %></h4>
+                <%else%>
+                    <h4 class="mt-0 mb-0"> Tiempo </h4>
+                    <h6 class="mt-0 mb-3"> por definir </h6>
+                    <h3 class="mt-0 mb-0"> Comentarios </h3>
+                    <h6 class="mt-0 mb-3"> por definir</h6>
+                <%end%>
+                <% if @contract.state == nil%>
+                    <td><%= link_to 'Eliminar', contract, 
+                        method: :delete, data: { confirm: 'Are you sure?' },:class => "btn btn-outline-primary float-right" %></td>
+                <%end%>
+            </div>
+        </div>
+    </div>
+</div>
