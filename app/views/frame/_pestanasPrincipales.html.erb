@@ -29,20 +29,10 @@
       <%=Contract.where(user_id: current_user.id).count%>
    	</span></button>
   <div class="dropdown-menu" style="right: 0; left: auto;" role="menu">
-    <% if @user_cliente != nil or fsadfsdfsafd @user_ofertante != nil%>
+    <% if @user_cliente != nil or  @user_ofertante != nil%>
         <ul>
           Mías
-          <% @user_ofertante.each do |contract|  %>
-            <% @offer_c.each do |offer| %>
-              <%if contract.offer_id == offer.id %>
-                  <div class="dropdown-divider">Mías</div>
-                      <a class="dropdown-item" href="#notificacion" data-toggle="modal">
-                        <strong>Oferta: </strong><%=offer.name%>
-                        <p><strong>Usuario: </strong></p>
-                      </a>
-                  <%end%>
-              <%end%>
-          <%end%>
+
         </ul>
         <ul>
           Solicitadas

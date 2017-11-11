@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5a814ca4-6e25-41e5-89a1-23976984a51d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/contracts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/contracts_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/frame_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/frame_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/frame/_pestanasPrincipales.html.erb" afterPath="$PROJECT_DIR$/app/views/frame/_pestanasPrincipales.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/frame/perfilPublicoCompleto.html.erb" afterPath="$PROJECT_DIR$/app/views/frame/perfilPublicoCompleto.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -29,8 +26,8 @@
       <file leaf-file-name="_pestanasPrincipales.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/frame/_pestanasPrincipales.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+            <state relative-caret-position="288">
+              <caret line="43" column="74" lean-forward="false" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -39,8 +36,8 @@
       <file leaf-file-name="frame_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/frame_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+            <state relative-caret-position="571">
+              <caret line="137" column="4" lean-forward="false" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -250,12 +247,12 @@
       <workItem from="1510005000374" duration="3207000" />
       <workItem from="1510292375030" duration="2252000" />
       <workItem from="1510333917001" duration="6904000" />
-      <workItem from="1510429929409" duration="1726000" />
+      <workItem from="1510429929409" duration="2423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67698000" />
+    <option name="totallyTimeSpent" value="68395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -635,16 +632,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/frame/_pestanasPrincipales.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+        <state relative-caret-position="288">
+          <caret line="43" column="74" lean-forward="false" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/frame_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="571">
+          <caret line="137" column="4" lean-forward="false" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding />
         </state>
       </provider>
