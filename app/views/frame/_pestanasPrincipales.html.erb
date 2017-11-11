@@ -26,12 +26,27 @@
   <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
     <i class="fa fa-handshake-o" aria-hidden="true"></i>
     <span class="badge badge-dark">
-      <%=Contract.where(user_id: current_user.id).count%>
+      <%=Contract.where(user_id: current_user.id).count + Contract.where(offer_id: @este).count %>
    	</span></button>
   <div class="dropdown-menu" style="right: 0; left: auto;" role="menu">
     <% if @user_cliente != nil or  @user_ofertante != nil%>
         <ul>
           Mías
+
+          <% (Contract.where(offer_id: @este)).each do |contract| %>
+              <% @este.each do |offer| %>
+                  <%if contract.offer_id == offer.id %>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#notificacion" data-toggle="modal">
+                      <strong>Oferta: </strong><%=offer.name%>
+                      <% usuario = User.where(:id => offer.user_id) %>
+                      <% usuario.each do |user| %>
+                            <p><strong>Usuario: </strong><%=user.firstName%><%= " " + user.firstLastName%></p>
+                       </a>
+                      <%end%>
+                  <%end%>
+               <% end %>
+         <%end%>
 
         </ul>
         <ul>
@@ -40,7 +55,6 @@
              <% id = contract.offer_id %>
               <% offert = Offer.where(:id => id) %>
                 <% offert.each do |offer| %>
-                  <div class="dropdown-divider">Solicitadas</div>
                   <a class="dropdown-item" href="#notificacion" data-toggle="modal">
                     <strong>Oferta: </strong><%=offer.name%>
                     <% usuario = User.where(:id => offer.user_id) %>
@@ -140,7 +154,7 @@
 				 Se procedera a la aceptacion de terminos del contrato
 			</div>
 			<div class="modal-footer">
-			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Cerrar</button>					   
+			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Cerrar</button>
 		</div>
 	</div>
 </div>

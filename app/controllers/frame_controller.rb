@@ -20,8 +20,10 @@ class FrameController < ApplicationController
     if @userRequest != nil
       @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
-    @request = Request.new       
-    
+    @request = Request.new
+
+    @este = Offer.where(user_id: current_user.id)
+
   end
 
   def categorias
@@ -43,8 +45,10 @@ class FrameController < ApplicationController
     if @userRequest != nil
       @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
-    @request = Request.new       
-    
+    @request = Request.new
+
+    @este = Offer.where(user_id: current_user.id)
+    @este2 = Contract.where(offer_id: @este.id)
   end 
 
   def historial
@@ -67,8 +71,11 @@ class FrameController < ApplicationController
     if @userRequest != nil
       @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
-    @request = Request.new       
-    
+    @request = Request.new
+
+
+    @este = Offer.where(user_id: current_user.id)
+    @este2 = Contract.where(offer_id: @este.id)
   end
 
   def inicio
@@ -87,8 +94,13 @@ class FrameController < ApplicationController
     if @userRequest != nil
       @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
-    @request = Request.new       
-    
+    @request = Request.new
+
+
+
+    @este = Offer.where(user_id: current_user.id)
+
+
   end
 
   def verMisOfertas
@@ -109,8 +121,11 @@ class FrameController < ApplicationController
       @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
     @ver_oferta_unicas = Offer.where(:user_id => current_user.id).reverse
-    @request = Request.new       
-    
+    @request = Request.new
+
+
+    @este = Offer.where(user_id: current_user.id)
+    @este2 = Contract.where(offer_id: @este.id)
   end
 
   def verDetallesOferta
@@ -135,7 +150,7 @@ class FrameController < ApplicationController
     @userRequestOffer = Request.where(user_id = (current_user.id).to_s)
     @userRequest = Request.where(:user_id => current_user.id)
     @user_cliente = Contract.where(user_id: current_user)
-    
+
     @id_notif = params[:requests]    
     @nom_notif = params[:users] 
     @ofer_notif = params[:offers]  
@@ -147,8 +162,11 @@ class FrameController < ApplicationController
     if @userRequest != nil
        @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
     end
-     @request = Request.new       
-     
+     @request = Request.new
+
+
+    @este = Offer.where(user_id: current_user.id)
+    @este2 = Contract.where(offer_id: @este.id)
   end
  
   def perfilPublico
@@ -167,17 +185,14 @@ class FrameController < ApplicationController
     @ofid = params[:offers]
     @request = Request.new
     @ofcategory = Offer.where(:category_id => @offer.category_id)
-                       .where.not(:user_id => current_user,:id => @offer.id).limit(3).reverse
+                      .where.not(:user_id => current_user,:id => @offer.id).limit(3).reverse
     if @ofcategory.size < 3
       @ofcategory = Offer.where.not(:user_id => current_user,:id => @offer.id).limit(3).reverse
 
     end
   end
-
-
-
   def perfilPublicoCompleto
-    @contract_o = Contract.where(offer_id: @offer_c)
+    @contract_o = Cosntract.where(offer_id: @offer_c)
 
     @oferta_solicitada = Offer.where(id: @offerta_id)
 
