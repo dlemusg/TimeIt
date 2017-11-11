@@ -8,19 +8,8 @@ class FrameController < ApplicationController
 
     #contract
     @contract_o = Contract.where(offer_id: @offer_c)
-    @user_cliente = Contract.where(user_id: current_user)
 
     @oferta_solicitada = Offer.where(id: @offerta_id)
-
-
-    @oferta_usario_actual = Offer.where(user_id: current_user.id)
-    @contratos_prioios = Contract.where(id: @oferta_usario_actual.id)
-
-    @oferta1 = Offers.where(id: Contract.id_oferta)
-
-
-    @contrato1. Contract.where(offer_id: Offer.id)
-
 
     @user_ofertante = Contract.where(id: @contract_o)
     @oferta_completa = Offer.where(id: @offer_cliente)
@@ -52,7 +41,6 @@ class FrameController < ApplicationController
 
   def historial
     @offer = Offer.new
-
     @userRequest = Request.where(:user_id => current_user.id)
     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
     if @userRequest != nil
@@ -64,8 +52,16 @@ class FrameController < ApplicationController
 
   def inicio
     @offer = Offer.new
+    @contract_o = Contract.where(offer_id: @offer_c)
 
+    @oferta_solicitada = Offer.where(id: @offerta_id)
+
+    @user_ofertante = Contract.where(id: @contract_o)
+    @oferta_completa = Offer.where(id: @offer_cliente)
+    @userRequestOffer = Request.where(user_id = (current_user.id).to_s)
     @userRequest = Request.where(:user_id => current_user.id)
+    @user_cliente = Contract.where(user_id: current_user)
+
     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
     if @userRequest != nil
       @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
@@ -77,6 +73,7 @@ class FrameController < ApplicationController
   def verMisOfertas
     @offer = Offer.new
     @userRequest = Request.where(:user_id => current_user.id)
+
     @ver_oferta_todas = Offer.where.not(:user_id => current_user.id).reverse
     if @userRequest != nil
       @ver_oferta_todas2 = Offer.where(:user_id => current_user.id)
@@ -110,7 +107,6 @@ class FrameController < ApplicationController
     @ver_perfil_publico = User.where(:id => @user)
     @ofid = params[:offers]
     @request = Request.new
-
     @ofcategory = Offer.where(:category_id => @offer.category_id)
                        .where.not(:user_id => current_user,:id => @offer.id).limit(3).reverse
     if @ofcategory.size < 3

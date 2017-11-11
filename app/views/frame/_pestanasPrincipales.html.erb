@@ -26,13 +26,13 @@
   <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
     <i class="fa fa-handshake-o" aria-hidden="true"></i>
     <span class="badge badge-dark">
-      <%=Contract.where(user_id: current_user.id).count + Contract.where(id: @contract_o).count%>
+      <%=Contract.where(user_id: current_user.id).count%>
    	</span></button>
   <div class="dropdown-menu" style="right: 0; left: auto;" role="menu">
-    <% if @user_cliente != nil or @user_ofertante != nil%>
+    <% if @user_cliente != nil or fsadfsdfsafd @user_ofertante != nil%>
         <ul>
           Mías
-          <% @user_ofertante.each do |contract| %>
+          <% @user_ofertante.each do |contract|  %>
             <% @offer_c.each do |offer| %>
               <%if contract.offer_id == offer.id %>
                   <div class="dropdown-divider">Mías</div>
