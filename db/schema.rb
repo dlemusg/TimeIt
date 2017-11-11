@@ -75,8 +75,9 @@ ActiveRecord::Schema.define(version: 20171110180817) do
   create_table "contracts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "user_id"
     t.bigint "offer_id"
-    t.integer "state"
-    t.integer "value"
+    t.integer "state", default: 0
+    t.integer "value", default: 0
+    t.string "comments", default: ""
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["offer_id"], name: "index_contracts_on_offer_id"

@@ -113,7 +113,10 @@
 				<%=@nom_notif%> desea solicitar el servicio "<%=@ofer_notif%>"
 			</div>
 			<div class="modal-footer">
-        <%=link_to "Aceptar", { :controller => "contracts", :action => "create"}, :class => "btn btn-outline-primary float-right" %>
+					<% if @id_notif != nil %>
+						<%= render "contracts/form", contract: Contract.new, :locals => {
+							:idOffer => @id_notif.offer_id ,:idUser => @id_notif.idDemandante} %>
+					<%end%>
 			    <% if @id_notif != nil %>
 			    	<%= button_to "Rechazar", @id_notif, :method => :delete, :class=>"btn btn-outline-primary float-right"%>    		
 			  	<% end %>	

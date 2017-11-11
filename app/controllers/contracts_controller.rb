@@ -4,16 +4,12 @@ class ContractsController < InheritedResources::Base
     @contract = Contract.new
   end
 
-  # POST /offers
-  # POST /offers.json
   def create
-    @contract= Contract.new(request_params)
+    @contract= Contract.new(contract_params)
     respond_to  do |format|
       if @contract.save
-        format.html
+        format.html { redirect_to @contract, notice: 'Offer was successfully created.' }
         format.json { render :show, status: :created, location: @contract}
-        format.js
-
       else
         format.json { render json: @contract.errors, status: :unprocessable_entity }
         format.js
@@ -21,11 +17,9 @@ class ContractsController < InheritedResources::Base
     end
   end
 
-
   private
-
     def contract_params
-      params.require(:contract).permit()
+      params.require(:contract).permit(:value,:user_id, :offer_id,:comments)
     end
 end
 

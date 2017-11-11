@@ -5,6 +5,7 @@ class CreateContracts < ActiveRecord::Migration[5.1]
       t.references :offer, foreign_key: true
       t.integer :state
       t.integer :value
+      t.string :comments
       t.timestamps
     end
   end
