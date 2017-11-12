@@ -33,7 +33,11 @@
 
   <div class="form-group col-md-8">
         <%= f.label :photoOffer, 'Imagen oferta'%><br />
-        <%= f.file_field :picture, required:true%>
+        <%if locals[:variable] == 'Cambiar' %>
+          <%= f.file_field :picture%>
+        <%else%>
+          <%= f.file_field :picture, required:true%>
+        <%end%>
   </div>
 
   <div class="form-group col-md-8">
