@@ -193,7 +193,7 @@ class FrameController < ApplicationController
     end
   end
   def perfilPublicoCompleto
-    @contract_o = Cosntract.where(offer_id: @offer_c)
+    @contract_o = Contract.where(offer_id: @offer_c)
 
     @oferta_solicitada = Offer.where(id: @offerta_id)
 
