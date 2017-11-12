@@ -8,24 +8,65 @@
         </div>
         <div class="col-lg-5">
             <div class="media-body">
-                <h2 class="mt-0 mb-0"> <%= @contract.offer.name %></h4>
-                <h6 class="mt-0 mb-3"><%= @contract.offer.description %></h6>
+                <h2 class="mt-0 mb-0"> <%= @contract.offer.name %></h2>
+                <h7 class="mt-0 mb-3"><%= @contract.offer.description %></h7>
                 <% if @contract.value != nil %>
-                    <h4 class="mt-0 mb-0"> <%= "Tiempo" %></h4>
-                    <h4 class="mt-0 mb-3"> <%= @contract.value %> horas</h4>
-                    <h3 class="mt-0 mb-0"> Comentarios </h3>
-                    <h4 class="mt-0 mb-0">  por definir </h4>
-                    <h4 class="mt-0 mb-3"> <%= @contract.comments %></h4>
+                    <h5 class="mt-0 mb-0">  Tiempo: </h5>
+                    <h7 class="mt-0 mb-3"> <%= @contract.value %><%=" "%> horas </h7>
+                    <h5 class="mt-0 mb-0"> Comentarios: </h5>
+                    <h7 class="mt-0 mb-3"> <%= @contract.comments %></h7>
                 <%else%>
-                    <h4 class="mt-0 mb-0"> Tiempo </h4>
-                    <h6 class="mt-0 mb-3"> por definir </h6>
-                    <h3 class="mt-0 mb-0"> Comentarios </h3>
-                    <h6 class="mt-0 mb-3"> por definir</h6>
+                    <h5 class="mt-0 mb-0"> Tiempo: </h5>
+                    <h7 class="mt-0 mb-3"> Por definir </h7>
+                    <h5 class="mt-0 mb-0"> Comentarios: </h5>
+                    <h7 class="mt-0 mb-3"> Por definir</h7>
                 <%end%>
                 <% if @contract.state == nil%>
                     <td><%= link_to 'Eliminar', contract, 
-                        method: :delete, data: { confirm: 'Are you sure?' },:class => "btn btn-outline-primary float-right" %></td>
+                        method: :delete, data: { confirm: 'Are you sure?' },
+                        :class => "btn btn-outline-primary float-right" %></td>
                 <%end%>
+                <% if @contract.user_id == current_user.id%>
+                    <button type="button" class="btn btn-outline-primary float-right"
+                    data-toggle="modal" data-target="#hacerContrato">Hacer contrato</button>
+                <%else%>
+                    <button type="button" class="btn btn-outline-primary float-right"
+                    data-toggle="modal" data-target="#info">Información</button>
+                <%end%>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="hacerContrato" data-target="#hacerContrato" 
+    tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	        <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Contrato</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	            	<span aria-hidden="true">&times;</span>
+		        </button>
+			</div>
+			<div class="modal-body">
+				<%= render "form2", contract: @contract %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="info" data-target="#info" 
+    tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Información</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h7 class="mt-0 mb-3"> Debes esperar a que tu cliente llene el formulario</h7>
             </div>
         </div>
     </div>
