@@ -18,6 +18,19 @@ class OffersController < ApplicationController
   # GET /offers/1
   # GET /offers/1.json
   def show
+    @contract_o = Contract.where(offer_id: @offer_c)
+
+    @oferta_solicitada = Offer.where(id: @offerta_id)
+
+    @user_ofertante = Contract.where(id: @contract_o)
+    @oferta_completa = Offer.where(id: @offer_cliente)
+    @userRequestOffer = Request.where(user_id = (current_user.id).to_s)
+    @userRequest = Request.where(:user_id => current_user.id)
+    @user_cliente = Contract.where(user_id: current_user)
+    @user = params[:users]
+    @ver_perfil_publico = User.where(:id => @user)
+    @oferta_publica = Offer.where(:user_id => @user)
+    @este = Offer.where(user_id: current_user.id)
   end
 
   # GET /offers/new

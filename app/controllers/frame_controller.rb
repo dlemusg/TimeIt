@@ -135,6 +135,7 @@ class FrameController < ApplicationController
     @userRequestOffer = Request.where(user_id = (current_user.id).to_s)
     @userRequest = Request.where(:user_id => current_user.id)
     @user_cliente = Contract.where(user_id: current_user)
+    @este = Offer.where(user_id: current_user.id)
 
 
 
@@ -191,7 +192,10 @@ class FrameController < ApplicationController
     if @ofcategory.size < 3
       @ofcategory = Offer.where.not(:user_id => current_user,:id => @offer.id).limit(3).reverse
     end
+    @este = Offer.where(user_id: current_user.id)
+
   end
+
   def perfilPublicoCompleto
     @contract_o = Contract.where(offer_id: @offer_c)
 
@@ -205,6 +209,8 @@ class FrameController < ApplicationController
     @user = params[:users]
     @ver_perfil_publico = User.where(:id => @user)
     @oferta_publica = Offer.where(:user_id => @user)
+    @este = Offer.where(user_id: current_user.id)
+
 
   end
 
