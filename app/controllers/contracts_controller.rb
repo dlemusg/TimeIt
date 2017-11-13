@@ -19,6 +19,15 @@ class ContractsController < ApplicationController
       end
     end
   end
+
+  def aceptar
+    @contract = Contract.find_by_id(params[:id])
+    @contract.update_attribute(:state, 1)
+    respond_to do |format|
+      format.html { redirect_to @contract }
+      format.json { head :no_content }
+    end
+  end
   
   def destroy
     @contract = Contract.find_by_id(params[:id])
@@ -44,7 +53,7 @@ class ContractsController < ApplicationController
 
   private
     def contract_params
-      params.require(:contract).permit(:value,:user_id, :offer_id,:comments)
+      params.require(:contract).permit(:value,:user_id, :offer_id,:comments, :state)
     end
 end
 

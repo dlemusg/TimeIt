@@ -30,18 +30,23 @@
     <div class="dropdown-menu" style="right: 0; left: auto;">
       <% if @user_cliente != nil or  @user_ofertante != nil%>
           <ul class="list-unstyled">
-            <h6><center><strong>Mías</strong></center></h6>
+            <h6><center><strong>Mis ofertas</strong></center></h6>
             <% (Contract.where(offer_id: @este)).each do |contract| %>
                 <% @este.each do |offer| %>
-                    <%if contract.offer_id == offer.id %>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/contracts/<%=contract.id%>">
-                          <strong>Oferta: </strong><%=offer.name%>
-                          <% usuario = User.where(:id => offer.user_id) %>
-                          <% usuario.each do |user| %>
+					<%if contract.offer_id == offer.id %>
+					<div class="dropdown-divider"></div>
+						<%if contract.state == 0%>
+						  <%@contract1 = contract%>
+						  <a class="dropdown-item" href="#state0" data-toggle="modal">
+						<%else%>
+						  <a class="dropdown-item" href="/contracts/<%=contract.id%>">
+						<% end %>
+                            <strong>Oferta: </strong><%=offer.name%>
+                            <% usuario = User.where(:id => offer.user_id) %>
+                            <% usuario.each do |user| %>
                               <p><strong>Usuario: </strong><%=user.firstName%><%= " " + user.firstLastName%></p>
-                        <% end %>
-                        </a>
+                            <% end %>
+						  </a>
                     <%end%>
                 <%end%>
             <%end%>
@@ -58,8 +63,8 @@
                       <% usuario = User.where(:id => offer.user_id) %>
                       <% usuario.each do |user| %>
                           <p><strong>Usuario: </strong><%=user.firstName%><%= " " + user.firstLastName%></p>
-                    </a>
-                      <%end%>
+					  <%end%>
+					</a>
                 <%end%>
             <%end%>
           </ul>
@@ -145,7 +150,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="acep_notificacion" data-target="#acep_notificacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="state0" data-target="#state0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	        <div class="modal-header">
@@ -155,9 +160,18 @@
 		        </button>
 			</div>
 			<div class="modal-body">
-				 Se procedera a la aceptacion de terminos del contrato
+				<%if @contract1 != nil%>
+					<center><h2 class="mt-0 mb-0"> <%= @contract1.offer.name %></h2></center>
+					<h5 class="mt-0 mb-0">  Tiempo: <%= @contract1.value %><%=" "%> horas </h5>
+					<h5 class="mt-0 mb-0"> Comentarios: <%= @contract1.comments %></h5>
+				<%end%>
 			</div>
 			<div class="modal-footer">
+				<td><%=link_to "Aceptar",{ :controller => "contracts", :action => "aceptar", 
+					:id => @contract1.id},:class => "btn btn-outline-primary float-right" %></td>
+				<td><%= link_to 'Rechazar', @contract1, 
+					method: :delete, data: { confirm: '¿Estás seguro?' },
+					:class => "btn btn-outline-primary float-right" %></td>
 			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Cerrar</button>
 		</div>
 	</div>

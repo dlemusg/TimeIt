@@ -15,6 +15,7 @@
                     <h7 class="mt-0 mb-3"> <%= @contract.value %><%=" "%> horas </h7>
                     <h5 class="mt-0 mb-0"> Comentarios: </h5>
                     <h7 class="mt-0 mb-3"> <%= @contract.comments %></h7>
+                    
                 <%else%>
                     <h5 class="mt-0 mb-0"> Tiempo: </h5>
                     <h7 class="mt-0 mb-3"> Por definir </h7>
@@ -22,16 +23,29 @@
                     <h7 class="mt-0 mb-3"> Por definir</h7>
                 <%end%>
                 <% if @contract.state == nil%>
-                    <td><%= link_to 'Eliminar', contract, 
-                        method: :delete, data: { confirm: 'Are you sure?' },
+                    <td><%= link_to 'Eliminar', @contract, 
+                        method: :delete, data: { confirm: '¿Estas seguro?' },
                         :class => "btn btn-outline-primary float-right" %></td>
-                <%end%>
-                <% if @contract.user_id == current_user.id%>
-                    <button type="button" class="btn btn-outline-primary float-right"
-                    data-toggle="modal" data-target="#hacerContrato">Hacer contrato</button>
-                <%else%>
-                    <button type="button" class="btn btn-outline-primary float-right"
-                    data-toggle="modal" data-target="#info">Información</button>
+                    <% if @contract.user_id == current_user.id%>
+                        <button type="button" class="btn btn-outline-primary float-right"
+                        data-toggle="modal" data-target="#hacerContrato">Hacer contrato</button>
+                    <%else%>
+                        <% @variable = 'Debes esperar a que tu cliente llene el formulario'%>
+                        <button type="button" class="btn btn-outline-primary float-right"
+                        data-toggle="modal" data-target="#info">Información</button>
+                    <%end%>
+                <% elsif @contract.state == 0 %>
+                    <% if @contract.user_id == current_user.id%>
+                        <% @variable = 'Debes esperar que la otra persona acepte'%>
+                        <button type="button" class="btn btn-outline-primary float-right"
+                        data-toggle="modal" data-target="#info">Información</button>
+                    <%else%>
+                        <td><%= link_to 'Rechazar', contract, 
+                            method: :delete, data: { confirm: '¿Estás seguro?' },
+                            :class => "btn btn-outline-primary float-right" %></td>
+                        <td><%=link_to "Aceptar",{ :controller => "contracts", :action => "aceptar", 
+                            :id => @contract.id},:class => "btn btn-outline-primary float-right" %></td>
+                    <%end%>
                 <%end%>
             </div>
         </div>
@@ -66,7 +80,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <h7 class="mt-0 mb-3"> Debes esperar a que tu cliente llene el formulario</h7>
+                <h7 class="mt-0 mb-3"> <%= @variable %></h7>
             </div>
         </div>
     </div>

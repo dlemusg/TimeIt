@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   get 'frame/perfilPublicoCompleto' => 'frame#perfilPublicoCompleto'
   get 'frame/prueba' => 'frame#prueba'
   get 'eliminar' => 'offers#eliminar', as: :eliminar
+  get 'aceptar' => 'contracts#aceptar', as: :aceptar
+  
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
