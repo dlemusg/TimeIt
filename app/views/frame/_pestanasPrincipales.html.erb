@@ -154,7 +154,8 @@
 	<div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	        <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel">Has aceptado la solicitud de <%=@nom_notif%></h5>
+		        <center><h5 class="modal-title" id="exampleModalLabel"> 
+					Te han enviado los terminos del contrato</h5></center>
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	            	<span aria-hidden="true">&times;</span>
 		        </button>
@@ -162,17 +163,20 @@
 			<div class="modal-body">
 				<%if @contract1 != nil%>
 					<center><h2 class="mt-0 mb-0"> <%= @contract1.offer.name %></h2></center>
-					<h5 class="mt-0 mb-0">  Tiempo: <%= @contract1.value %><%=" "%> horas </h5>
-					<h5 class="mt-0 mb-0"> Comentarios: <%= @contract1.comments %></h5>
+					<h5 class="mt-0 mb-0">  <strong> Tiempo: </strong> <%= @contract1.value %><%=" "%> horas </h5>
+					<h5 class="mt-0 mb-0"> <strong>Comentarios: </strong> <%= @contract1.comments %></h5>
 				<%end%>
 			</div>
 			<div class="modal-footer">
-				<td><%=link_to "Aceptar",{ :controller => "contracts", :action => "aceptar", 
-					:id => @contract1.id},:class => "btn btn-outline-primary float-right" %></td>
-				<td><%= link_to 'Rechazar', @contract1, 
-					method: :delete, data: { confirm: '¿Estás seguro?' },
-					:class => "btn btn-outline-primary float-right" %></td>
-			    <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Cerrar</button>
+				<%if @contract1 != nil%>
+					<td><%=link_to "Aceptar",{ :controller => "contracts", :action => "aceptar", 
+						:id => @contract1.id},:class => "btn btn-outline-primary float-right" %></td>
+					<td><%= link_to 'Rechazar', @contract1, 
+						method: :delete, data: { confirm: '¿Estás seguro?' },
+						:class => "btn btn-outline-primary float-right" %></td>
+					<button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Cerrar</button>
+				<%end%>
+			</div>
 		</div>
 	</div>
 </div>

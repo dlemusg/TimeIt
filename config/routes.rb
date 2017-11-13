@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get 'frame/prueba' => 'frame#prueba'
   get 'eliminar' => 'offers#eliminar', as: :eliminar
   get 'aceptar' => 'contracts#aceptar', as: :aceptar
+  get 'finalizando' => 'contracts#finalizando', as: :finalizando
   
 
 

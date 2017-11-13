@@ -28,6 +28,19 @@ class ContractsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def finalizando
+    @contract = Contract.find_by_id(params[:id])
+    if @contract.state == 1
+      @contract.update_attribute(:state, 2)
+    elsif @contract.state == 2
+      @contract.update_attribute(:state, 3)
+    end
+    respond_to do |format|
+      format.html { redirect_to @contract }
+      format.json { head :no_content }
+    end
+  end
   
   def destroy
     @contract = Contract.find_by_id(params[:id])
