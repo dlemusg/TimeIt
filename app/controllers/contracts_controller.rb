@@ -10,13 +10,19 @@ class ContractsController < ApplicationController
 
   def update
     @contract = Contract.find_by_id(params[:id])
-    respond_to do |format|
-      if @contract.update(contract_params)
-        format.html { redirect_to @contract}
-        format.json { render :show, status: :ok, location: @contract }
-      else
-        format.json { render json: @offer.errors, status: :unprocessable_entity }
+    @user = User.find(@contract.user_id)
+    if params[:contract][:value].to_i <= @user.time
+      respond_to do |format|
+        if @contract.update(contract_params)
+          @user.update_attribute(:time,@user.time - params[:contract][:value].to_i )
+          format.html { redirect_to @contract}
+          format.json { render :show, status: :ok, location: @contract }
+        else
+          format.json { render json: @offer.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to @contract
     end
   end
 
