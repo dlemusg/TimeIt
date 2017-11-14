@@ -40,6 +40,8 @@ class ContractsController < ApplicationController
     if @contract.state == 1
       @contract.update_attribute(:state, 2)
     elsif @contract.state == 2
+      @user = User.find(@contract.offer.user_id)
+      @user.update_attribute(:time,@user.time + @contract.value )
       @contract.update_attribute(:state, 3)
     end
     respond_to do |format|
@@ -50,6 +52,12 @@ class ContractsController < ApplicationController
   
   def destroy
     @contract = Contract.find_by_id(params[:id])
+    if @contract.value > 0
+      @user = User.find(@contract.user_id)
+      @user.update_attribute(:time,@user.time + @contract.value)
+    end
+
+
     @contract.destroy
     respond_to do |format|
       format.html { redirect_to frame_inicio_path }
