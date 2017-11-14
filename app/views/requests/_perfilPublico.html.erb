@@ -20,7 +20,11 @@
         <font size="5"><center><%=usuario.firstName%> <%=usuario.firstLastName%></center></font>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><strong>Ubicación: </strong><%=usuario.location%></li>
-          <li class="list-group-item"><strong>Descripción: </strong><%=usuario.description%></li>
+          <%if locals[:contrato] == 1%>
+            <li class="list-group-item"><strong>Celular: </strong><%=usuario.cel%></li>
+            <li class="list-group-item"><strong>Telefono: </strong><%=usuario.tel%></li>
+          <%end%>
+          <li class="list-group-item"><strong>Descridpción: </strong><%=usuario.description%></li>
         </ul>
     <%end%>
 

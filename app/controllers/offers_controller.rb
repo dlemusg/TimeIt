@@ -49,7 +49,7 @@ class OffersController < ApplicationController
 
     respond_to do |format|
       if @offer.save
-        format.html { redirect_to @offer, notice: 'Offer was successfully created.' }
+        format.html { redirect_to @offer }
         format.json { render :show, status: :created, location: @offer }
       else
         format.html { render :new }
@@ -64,7 +64,7 @@ class OffersController < ApplicationController
     if current_user.id == @offer.user_id
       respond_to do |format|
         if @offer.update(offer_params)
-          format.html { redirect_to @offer, notice: 'Offer was successfully updated.' }
+          format.html { redirect_to @offer}
           format.json { render :show, status: :ok, location: @offer }
         else
           format.html { render :edit }
@@ -81,16 +81,18 @@ class OffersController < ApplicationController
   def destroy
     @offer.destroy
     respond_to do |format|
-      format.html { redirect_to offers_url, notice: 'Offer was successfully destroyed.' }
+      format.html { redirect_to offers_url }
       format.json { head :no_content }
     end
   end
 
   def eliminar
     @offer_id = params[:offer_id]
-    @offer = Offer.where(:id => @offer_id)
-    @offer.each do |offer|
-        offer.update_attribute(:state, "desactivado")
+    @offer = Offer.find(@offer_id)
+    @offer.update_attribute(:state, "desactivado")
+    @request = Request.where(offer_id: @offer.id)
+    @request.each do |r|
+      r.destroy
     end
     redirect_to frame_verMisOfertas_path
 

@@ -6,6 +6,11 @@ class ContractsController < ApplicationController
   
   def show
     @contract = Contract.find_by_id(params[:id])
+    if current_user.id == @contract.user_id
+      @ver_perfil_publico = User.where(:id => @contract.offer.user_id)
+    else
+      @ver_perfil_publico = User.where(:id =>@contract.user_id)
+    end
   end
 
   def update
@@ -56,7 +61,6 @@ class ContractsController < ApplicationController
       @user = User.find(@contract.user_id)
       @user.update_attribute(:time,@user.time + @contract.value)
     end
-
 
     @contract.destroy
     respond_to do |format|
