@@ -57,7 +57,7 @@ class ContractsController < ApplicationController
   
   def destroy
     @contract = Contract.find_by_id(params[:id])
-    if @contract.value > 0
+    if @contract.value != nil && @contract.value > 0
       @user = User.find(@contract.user_id)
       @user.update_attribute(:time,@user.time + @contract.value)
     end
@@ -71,8 +71,13 @@ class ContractsController < ApplicationController
 
   def create
     @contract = Contract.new(contract_params)
+    @request = Request.where(user_id: @contract.offer.user_id,
+      idDemandante: @contract.user_id,offer_id: @contract.offer_id)
     respond_to  do |format|
       if @contract.save
+        @request.each do |r|
+          r.destroy
+        end
         format.html { redirect_to @contract }
         format.json { render :show, status: :created, location: @contract}
       else

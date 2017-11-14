@@ -134,7 +134,7 @@
 			</div>
 			<div class="modal-footer">
 					<% if @id_notif != nil %>
-						<%= render "contracts/form", contract: Contract.new, :locals => {
+						<%= render "contracts/form", contract: Contract.new,idRequest: @id_notif.id, :locals => {
 							:idOffer => @id_notif.offer_id ,:idUser => @id_notif.idDemandante} %>
 					<%end%>
 			    <% if @id_notif != nil %>
