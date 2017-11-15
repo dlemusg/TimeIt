@@ -1,4 +1,3 @@
-
 <ul class="nav nav-tabs card-header-tabs">
 
   <li class="nav-item">
@@ -21,9 +20,7 @@
 
 
 
-
-<div class="btn-group">
-  <div class="dropdown">
+<div class="dropdown">
     <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
       <i class="fa fa-handshake-o" aria-hidden="true"></i>
       <span class="badge badge-dark">
@@ -53,10 +50,8 @@
                                     alt="Generic placeholder image">
                                   </div>
                                 </div>
-
                                 <div class="col-lg-5">
                                   <div class="media-body">
-
                                     <h8 class="mt-0 mb-3"><strong>Oferta: </strong><%=offer.name%></h8>
                                     <% usuario = User.where(:id => offer.user_id) %>
                                     <% usuario.each do |user| %>
@@ -74,7 +69,6 @@
               <div class="col-lg-6">
                 <h6><center><strong>Solicitadas</strong></center></h6>
                 <% @user_cliente.each do |contract| %>
-
                     <% id = contract.offer_id %>
                     <% offert = Offer.where(:id => id) %>
                     <% offert.each do |offer| %>
@@ -112,107 +106,119 @@
       </div>
       </div>
     </div>
-  </div>
-
-  <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
-    <i class="fa fa-users "  aria-hidden="true"></i>
-    <span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%>
-   	</span></button>
-  <div class="dropdown-menu" style="right: 0; left: auto;">
-    <% if @userRequest != nil and Request.exists? and @ver_oferta_todas2 != nil and Offer.exists?%>
-        <% @userRequest.each do |userq| %>
-            <% @ver_oferta_todas2.each do |offer| %>
-                <% if userq.offer_id == offer.id %>
-                    <div class="dropdown-divider"></div>
-                    <% @nom_notif = User.where(id: userq.idDemandante).first.firstName%>
-                    <% @ofer_notif = offer.name%>
-                    <% @id_notif = userq%>
-                    <a class="dropdown-item" href="#notificacion" data-toggle="modal">
-                      <strong>Oferta: </strong><%=offer.name%>
-                      <p><strong>Usuario: </strong><%= User.where(id: userq.idDemandante).first.firstName%> </p>
-                    </a>
-                <% end %>
-            <% end %>
-        <% end %>
-    <% end %>
-  </div>
 
 
-  <div class="dropdown">
+
+
+
+
+
+
+
+
+
+
+
+    <div class="btn-group">
     <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
-      <span class="caret"></span></button>
-    <ul class="dropdown-menu" style="right: 0; left: auto;">
-      <%= link_to 'Modificar Cuenta', edit_user_registration_path, :class => "btn btn-outline-secundary" %>
-      <%= link_to 'Transacciones', href="/frame/historial", :class => "btn btn-outline-secundary" %>
-      <%= link_to 'Salir', destroy_user_session_path, method: :delete, :class => "btn btn-outline-secundary" %>
-    </ul>
-  </div>
-</div>
+      <i class="fa fa-users "  aria-hidden="true"></i>
+      <span class="badge badge-dark"> <%=Request.where(user_id: current_user.id).count%>
+   	</span></button>
+    <div class="dropdown-menu" style="right: 0; left: auto;">
+      <% if @userRequest != nil and Request.exists? and @ver_oferta_todas2 != nil and Offer.exists?%>
+          <% @userRequest.each do |userq| %>
+              <% @ver_oferta_todas2.each do |offer| %>
+                  <% if userq.offer_id == offer.id %>
+                      <div class="dropdown-divider"></div>
+                      <% @nom_notif = User.where(id: userq.idDemandante).first.firstName%>
+                      <% @ofer_notif = offer.name%>
+                      <% @id_notif = userq%>
+                      <a class="dropdown-item" href="#notificacion" data-toggle="modal">
+                        <strong>Oferta: </strong><%=offer.name%>
+                        <p><strong>Usuario: </strong><%= User.where(id: userq.idDemandante).first.firstName%> </p>
+                      </a>
+                  <% end %>
+              <% end %>
+          <% end %>
+      <% end %>
+    </div>
 
 
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="notificacion" data-target="#notificacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Solicitud</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-
-      <div class="modal-body">
-        <%=@nom_notif%> desea solicitar el servicio "<%=@ofer_notif%>"
-      </div>
-      <div class="modal-footer">
-        <% if @id_notif != nil %>
-            <%= render "contracts/form", contract: Contract.new,idRequest: @id_notif.id, :locals => {
-                :idOffer => @id_notif.offer_id ,:idUser => @id_notif.idDemandante} %>
-        <%end%>
-        <% if @id_notif != nil %>
-            <%= button_to "Rechazar", @id_notif, :method => :delete, :class=>"btn btn-outline-primary float-right"%>
-        <% end %>
-        <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Posponer</button>
-      </div>
-
-
+    <div class="dropdown">
+      <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span></button>
+      <ul class="dropdown-menu" style="right: 0; left: auto;">
+        <%= link_to 'Modificar Cuenta', edit_user_registration_path, :class => "btn btn-outline-secundary" %>
+        <%= link_to 'Transacciones', href="/frame/historial", :class => "btn btn-outline-secundary" %>
+        <%= link_to 'Salir', destroy_user_session_path, method: :delete, :class => "btn btn-outline-secundary" %>
+      </ul>
     </div>
   </div>
-</div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="state0" data-target="#state0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <center><h5 class="modal-title" id="exampleModalLabel">
-          Te han enviado los terminos del contrato</h5></center>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <%if @contract1 != nil%>
-            <center><h2 class="mt-0 mb-0"> <%= @contract1.offer.name %></h2></center>
-            <h5 class="mt-0 mb-0">  <strong> Tiempo: </strong> <%= @contract1.value %><%=" "%> horas </h5>
-            <h5 class="mt-0 mb-0"> <strong>Comentarios: </strong> <%= @contract1.comments %></h5>
-        <%end%>
-      </div>
-      <div class="modal-footer">
-        <%if @contract1 != nil%>
-            <td><%=link_to "Aceptar",{ :controller => "contracts", :action => "aceptar",
-                                       :id => @contract1.id},:class => "btn btn-outline-primary float-right" %></td>
-            <td><%= link_to 'Rechazar', @contract1,
-                            method: :delete, data: { confirm: '¿Estás seguro?' },
-                            :class => "btn btn-outline-primary float-right" %></td>
-            <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Cerrar</button>
-        <%end%>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="notificacion" data-target="#notificacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Solicitud</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+
+        <div class="modal-body">
+          <%=@nom_notif%> desea solicitar el servicio "<%=@ofer_notif%>"
+        </div>
+        <div class="modal-footer">
+          <% if @id_notif != nil %>
+              <%= render "contracts/form", contract: Contract.new,idRequest: @id_notif.id, :locals => {
+                  :idOffer => @id_notif.offer_id ,:idUser => @id_notif.idDemandante} %>
+          <%end%>
+          <% if @id_notif != nil %>
+              <%= button_to "Rechazar", @id_notif, :method => :delete, :class=>"btn btn-outline-primary float-right"%>
+          <% end %>
+          <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Posponer</button>
+        </div>
+
+
       </div>
     </div>
   </div>
-</div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="state0" data-target="#state0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <center><h5 class="modal-title" id="exampleModalLabel">
+            Te han enviado los terminos del contrato</h5></center>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%if @contract1 != nil%>
+              <center><h2 class="mt-0 mb-0"> <%= @contract1.offer.name %></h2></center>
+              <h5 class="mt-0 mb-0">  <strong> Tiempo: </strong> <%= @contract1.value %><%=" "%> horas </h5>
+              <h5 class="mt-0 mb-0"> <strong>Comentarios: </strong> <%= @contract1.comments %></h5>
+          <%end%>
+        </div>
+        <div class="modal-footer">
+          <%if @contract1 != nil%>
+              <td><%=link_to "Aceptar",{ :controller => "contracts", :action => "aceptar",
+                                         :id => @contract1.id},:class => "btn btn-outline-primary float-right" %></td>
+              <td><%= link_to 'Rechazar', @contract1,
+                              method: :delete, data: { confirm: '¿Estás seguro?' },
+                              :class => "btn btn-outline-primary float-right" %></td>
+              <button type="button" class="btn btn-outline-primary float-right" data-dismiss="modal">Cerrar</button>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
