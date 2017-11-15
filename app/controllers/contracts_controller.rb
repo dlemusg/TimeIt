@@ -5,6 +5,23 @@ class ContractsController < ApplicationController
   end
   
   def show
+
+    @contract_o = Contract.where(offer_id: @offer_c)
+
+    @oferta_solicitada = Offer.where(id: @offerta_id)
+
+    @user_ofertante = Contract.where(id: @contract_o)
+    @oferta_completa = Offer.where(id: @offer_cliente)
+    @userRequestOffer = Request.where(user_id = (current_user.id).to_s)
+    @userRequest = Request.where(:user_id => current_user.id)
+    @user_cliente = Contract.where(user_id: current_user)
+    @user = params[:users]
+    @ver_perfil_publico = User.where(:id => @user)
+    @oferta_publica = Offer.where(:user_id => @user)
+    @este = Offer.where(user_id: current_user.id)
+
+    @transaccion = Contract.where(user_id: current_user.id, state: "3")
+
     @contract = Contract.find_by_id(params[:id])
     if current_user.id == @contract.user_id
       @ver_perfil_publico = User.where(:id => @contract.offer.user_id)
