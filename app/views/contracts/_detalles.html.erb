@@ -75,7 +75,7 @@
                         data-toggle="modal" data-target="#info">Información</button>    
                     <%end%>
                 <%elsif @contract.state == 3 %>
-                    <%if @contact.user_id == current_user  %>
+                    <%if @contract.user_id == current_user.id     %>
                     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#calification">Calificar</button>
                     <%end%>
                 <%end%>
