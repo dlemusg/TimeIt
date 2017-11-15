@@ -1,6 +1,6 @@
 <div class="card col-3 ">
   <img class="card-img-top" width="200" height="200" src= <%=current_user.photo%> height="250" width="250" >
-  <div align="center">
+  <div align="center"
   <%if Calification.where(user_id: current_user.id).average("value") === nil%>
   <li class="list-group-item">
     

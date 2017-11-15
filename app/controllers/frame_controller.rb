@@ -24,6 +24,8 @@ class FrameController < ApplicationController
 
     @este = Offer.where(user_id: current_user.id)
 
+
+    @transaccion = Contract.where(user_id: current_user.id, state: "3")
   end
 
   def categorias
@@ -48,6 +50,8 @@ class FrameController < ApplicationController
     @request = Request.new
 
     @este = Offer.where(user_id: current_user.id)
+
+    @transaccion = Contract.where(user_id: current_user.id, state: "3")
   end 
 
   def historial
@@ -74,6 +78,10 @@ class FrameController < ApplicationController
 
 
     @este = Offer.where(user_id: current_user.id)
+
+
+      
+    @transaccion = Contract.where(user_id: current_user.id, state: "3")
   end
 
   def inicio
@@ -98,7 +106,7 @@ class FrameController < ApplicationController
 
     @este = Offer.where(user_id: current_user.id)
 
-
+    @transaccion = Contract.where(user_id: current_user.id, state: "3")
   end
 
   def verMisOfertas
@@ -123,6 +131,9 @@ class FrameController < ApplicationController
 
 
     @este = Offer.where(user_id: current_user.id)
+
+
+    @transaccion = Contract.where(user_id: current_user.id, state: "3")
   end
 
   def verDetallesOferta
@@ -139,7 +150,7 @@ class FrameController < ApplicationController
 
 
 
-
+    @transaccion = Contract.where(user_id: current_user.id, state: "3")
 
   end
  
@@ -169,6 +180,8 @@ class FrameController < ApplicationController
 
 
     @este = Offer.where(user_id: current_user.id)
+
+    @transaccion = Contract.where(user_id: current_user.id, state: "3")
   end
  
   def perfilPublico
@@ -194,6 +207,9 @@ class FrameController < ApplicationController
     end
     @este = Offer.where(user_id: current_user.id)
 
+
+    @transaccion = Contract.where(user_id: current_user.id, state: "3")
+
   end
 
   def perfilPublicoCompleto
@@ -211,7 +227,7 @@ class FrameController < ApplicationController
     @oferta_publica = Offer.where(:user_id => @user)
     @este = Offer.where(user_id: current_user.id)
 
-
+    @transaccion = Contract.where(user_id: current_user.id, state: "3")
   end
 
 end

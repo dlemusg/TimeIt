@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get 'eliminar' => 'offers#eliminar', as: :eliminar
   get 'aceptar' => 'contracts#aceptar', as: :aceptar
   get 'finalizando' => 'contracts#finalizando', as: :finalizando
+  get 'califications/uno' => 'califications#uno', as: :uno
   
 
 

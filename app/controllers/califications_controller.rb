@@ -1,11 +1,21 @@
 class CalificationsController < InheritedResources::Base
   def new
     @calification = Calification.new
+
+    @cate1 = params[:cate]
   end
 
 
   def show
-    @calification = Calification.where(user_id: current_user.id).average("value")
+    @calification = Calification.new(calification_params)
+    @calification.save
+    redirect_to frame_inicio_path
+  end
+
+  def uno
+    @calification = Calification.new
+
+    
   end
 
 
@@ -25,12 +35,14 @@ class CalificationsController < InheritedResources::Base
         format.js
       end
     end
+
+    @cate1 = params[:cate]
   end
 
   private
   
       def calification_params
-        params.require(:calification).permit(:value, :user_id)
+        params.permit(:value,:user_id)
       end
 
 

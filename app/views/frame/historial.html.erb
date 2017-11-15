@@ -10,48 +10,38 @@
 			</nav>	 
 	  	</div>
 
-	  <div class="container card-body">
-	  
-	  	<table class="table table-hover">
-		  <thead>
-		    <tr>
-		      <th>#</th>
-		      <th>Demandante</th>
-		      <th>Oferente</th>
-		      <th>Servicio</th>
-		      <th>Costo del Servicio</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		    <tr>
-		      <th scope="row">1</th>
-		      <td>Usu Demandante/td>
-		      <td>Usu Oferente</td>
-		      <td>[Nom Servicio]</td>
-		      <td>$$$$$</td>
-		    </tr>
-		    <tr>
-		      <th scope="row">2</th>
-		      <td>Usu Demandante/td>
-		      <td>Usu Oferente</td>
-		      <td>[Nom Servicio]</td>
-		      <td>$$$$$</td>
-		    </tr>
-		    <tr>
-		      <th scope="row">3</th>
-		      <td>Usu Demandante/td>
-		      <td>Usu Oferente</td>
-		      <td>[Nom Servicio]</td>
-		      <td>$$$$$</td>
-		    </tr>
-		  
-		    </tr>
-		  </tbody>
-		</table> 
-
-	  </div>
-	</div>
-
-</div>
-
-</div>
+			<div class="container card-body">
+					
+						<table class="table table-hover">
+						<thead>
+							<tr>
+								<th> # </th>
+								<th>Demandante</th>
+								<th>Oferente</th>
+								<th>Servicio</th>
+								<th>Costo del Servicio</th>
+							</tr>
+						</thead>
+						<tbody>		   
+			
+							<tr>
+								<% @num = 0 %>		       			  
+								<% @transaccion.each do |transaccion| %>
+										<% @num = @num + 1%>
+										<th scope="row"> <%= @num %> </th>
+										<td> <%= current_user.firstName %> </td>
+										<td> <%=transaccion.offer.user.firstName %> </td>
+										<td> <%=transaccion.offer.name %> </td>
+										<td> <%= transaccion.value%> </td>
+								<% end %>
+							</tr>	  
+							
+						</tbody>
+					</table> 
+			
+					</div>
+				</div>
+			
+			</div>
+			
+			</div>
