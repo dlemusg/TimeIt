@@ -1,0 +1,48 @@
+<%= form_with(model: calification, local: true) do |form| %>
+<% if calification.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(calification.errors.count, "error") %> prohibited this calification from being saved:</h2>
+
+    <ul>
+    <% calification.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %> 
+<div class="row lead">
+    <div id="stars" class="starrr"></div>
+    You gave a rating of <span id="count">0</span> star(s)
+</div>
+
+<button onclick="changeImage()">
+    
+        <img id = 'star1'  style="min-width:30px" src="../../../star-off.png">
+        </button> 
+
+
+    <script>
+      function changeImage() {
+        var image = document.getElementById('star1');
+        image.src = "../../../star-on.png";
+      } 
+    </script>
+
+<div class="form-group">
+
+
+
+  
+
+
+
+<%= form.label :calificacion, 'nota:' %>
+<%= form.text_field :value, class: 'form-control',placeholder: 'valor', required:true%>
+<%= form.hidden_field :user_id, value: @contract.offer.user_id%>
+</div>
+
+
+<div class="form-group">
+  <%= form.submit "Calificar", :class => "btn btn-lg btn-primary  float-right"%>
+</div>
+<% end %>
